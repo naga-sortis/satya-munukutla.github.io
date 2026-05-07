@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="description" content="Naga Munukutla — Senior Cloud & AI Engineer based in Madrid, Spain. AWS, Python, AI automation, satellite telecommunications."/>
+<meta property="og:title" content="Naga Munukutla — Senior Cloud & AI Engineer"/>
+<meta property="og:description" content="5+ years building cloud-native systems on AWS and AI automation pipelines for satellite telecommunications."/>
+<title>Naga Munukutla — Cloud & AI Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,700;0,900;1,300&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<style>
+:root {
+  --bg:       #0a0e1a;
+  --bg2:      #0f1524;
+  --bg3:      #161d30;
+  --card:     #131929;
+  --border:   rgba(255,255,255,0.07);
+  --accent:   #4f8ef7;
+  --accent2:  #7c3aed;
+  --glow:     rgba(79,142,247,0.18);
+  --text:     #e8eaf0;
+  --text2:    #8b93a8;
+  --text3:    #4a5168;
+  --green:    #34d399;
+  --orange:   #fb923c;
+  --display:  'Fraunces', Georgia, serif;
+  --mono:     'DM Mono', monospace;
+  --body:     'Outfit', sans-serif;
+  --nav-h:    68px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--bg);color:var(--text);font-family:var(--body);overflow-x:hidden;line-height:1.6}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  height:var(--nav-h);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 6vw;
+  background:rgba(10,14,26,0.85);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+  transition:background 0.3s;
+}
+.nav-logo{
+  font-family:var(--display);
+  font-weight:900;font-size:1.5rem;
+  background:linear-gradient(135deg,#4f8ef7,#7c3aed);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  letter-spacing:-0.5px;text-decoration:none;
+}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{
+  color:var(--text2);font-size:0.875rem;font-weight:500;
+  text-decoration:none;letter-spacing:0.5px;
+  transition:color 0.2s;
+  text-transform:uppercase;font-family:var(--mono);
+}
+.nav-links a:hover{color:var(--accent)}
+.nav-toggle{display:none;background:none;border:none;color:var(--text);font-size:1.4rem;cursor:pointer}
+
+/* ── SECTIONS ── */
+section{padding:7rem 6vw 5rem}
+.section-label{
+  font-family:var(--mono);font-size:0.75rem;letter-spacing:2px;
+  color:var(--accent);text-transform:uppercase;margin-bottom:0.75rem;
+}
+.section-title{
+  font-family:var(--display);font-size:clamp(2rem,4vw,3.2rem);
+  font-weight:700;line-height:1.1;margin-bottom:1rem;
+  color:var(--text);
+}
+.section-sub{color:var(--text2);font-size:1rem;max-width:540px;margin-bottom:3rem}
+
+/* ── HERO ── */
+#home{
+  min-height:100vh;
+  display:flex;align-items:center;
+  padding-top:calc(var(--nav-h) + 4rem);
+  position:relative;overflow:hidden;
+}
+.hero-grid{
+  display:grid;grid-template-columns:1fr auto;
+  gap:4rem;align-items:center;width:100%;max-width:1100px;margin:0 auto;
+}
+.hero-eyebrow{
+  font-family:var(--mono);font-size:0.8rem;
+  color:var(--green);letter-spacing:2px;text-transform:uppercase;
+  margin-bottom:1.2rem;display:flex;align-items:center;gap:0.5rem;
+}
+.hero-eyebrow::before{content:'';width:32px;height:1px;background:var(--green)}
+.hero-name{
+  font-family:var(--display);
+  font-size:clamp(2.8rem,6vw,5rem);
+  font-weight:900;line-height:1.0;
+  margin-bottom:0.6rem;
+  letter-spacing:-2px;
+}
+.hero-name span{
+  display:block;
+  background:linear-gradient(135deg,#4f8ef7 0%,#7c3aed 60%,#fb923c 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+}
+.hero-role{
+  font-family:var(--display);font-style:italic;font-weight:300;
+  font-size:clamp(1.1rem,2vw,1.5rem);
+  color:var(--text2);margin-bottom:1.5rem;
+}
+.hero-desc{
+  font-size:1rem;color:var(--text2);max-width:500px;
+  line-height:1.8;margin-bottom:2.5rem;
+}
+.hero-tags{display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:2.5rem}
+.tag{
+  font-family:var(--mono);font-size:0.72rem;
+  background:rgba(79,142,247,0.1);
+  border:1px solid rgba(79,142,247,0.25);
+  color:var(--accent);border-radius:4px;
+  padding:4px 10px;letter-spacing:0.5px;
+}
+.tag.green{background:rgba(52,211,153,0.08);border-color:rgba(52,211,153,0.25);color:var(--green)}
+.tag.purple{background:rgba(124,58,237,0.1);border-color:rgba(124,58,237,0.3);color:#a78bfa}
+.hero-cta{display:flex;gap:1rem;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:0.5rem;
+  padding:0.75rem 1.6rem;border-radius:8px;
+  font-family:var(--body);font-weight:600;font-size:0.9rem;
+  text-decoration:none;cursor:pointer;border:none;
+  transition:all 0.2s;
+}
+.btn-primary{
+  background:linear-gradient(135deg,#4f8ef7,#7c3aed);
+  color:#fff;box-shadow:0 4px 24px rgba(79,142,247,0.3);
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(79,142,247,0.4)}
+.btn-outline{
+  background:transparent;color:var(--text);
+  border:1px solid var(--border);
+}
+.btn-outline:hover{background:var(--bg3);border-color:rgba(255,255,255,0.15)}
+
+/* Hero avatar */
+.hero-avatar{
+  width:260px;height:260px;border-radius:24px;
+  background:linear-gradient(135deg,#1a2a4a,#0f1a38);
+  border:1px solid var(--border);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  position:relative;flex-shrink:0;
+  box-shadow:0 0 60px rgba(79,142,247,0.12);
+}
+.avatar-initials{
+  font-family:var(--display);font-weight:900;font-size:4rem;
+  background:linear-gradient(135deg,#4f8ef7,#7c3aed);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  line-height:1;
+}
+.avatar-flag{font-size:2.5rem;margin-top:0.5rem}
+.avatar-badge{
+  position:absolute;bottom:-12px;left:50%;transform:translateX(-50%);
+  background:var(--green);color:#0a1a0f;
+  font-family:var(--mono);font-size:0.65rem;font-weight:500;
+  padding:4px 12px;border-radius:20px;white-space:nowrap;letter-spacing:0.5px;
+}
+
+/* Hero bg */
+.hero-bg{
+  position:absolute;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse 60% 50% at 80% 30%, rgba(79,142,247,0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 20% 70%, rgba(124,58,237,0.05) 0%, transparent 60%);
+}
+.hero-grid{position:relative;z-index:1}
+
+/* Grid dots */
+.grid-dots{
+  position:absolute;inset:0;pointer-events:none;z-index:0;
+  background-image:radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size:36px 36px;
+}
+
+/* Social icons */
+.social-row{display:flex;gap:1rem;margin-top:2rem}
+.social-icon{
+  width:38px;height:38px;border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--bg3);border:1px solid var(--border);
+  color:var(--text2);text-decoration:none;font-size:1rem;
+  transition:all 0.2s;
+}
+.social-icon:hover{color:var(--accent);border-color:var(--accent);background:rgba(79,142,247,0.08)}
+
+/* ── SKILLS ── */
+#skills{background:var(--bg2)}
+.skills-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:1.5rem;
+}
+.skill-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:16px;padding:1.75rem;
+  transition:border-color 0.2s,transform 0.2s;
+}
+.skill-card:hover{border-color:rgba(79,142,247,0.3);transform:translateY(-3px)}
+.skill-card-icon{
+  width:44px;height:44px;border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.3rem;margin-bottom:1.1rem;
+}
+.ic-blue{background:rgba(79,142,247,0.12);color:var(--accent)}
+.ic-purple{background:rgba(124,58,237,0.12);color:#a78bfa}
+.ic-green{background:rgba(52,211,153,0.1);color:var(--green)}
+.ic-orange{background:rgba(251,146,60,0.1);color:var(--orange)}
+.skill-card h3{font-size:1rem;font-weight:600;margin-bottom:0.75rem;color:var(--text)}
+.skill-pills{display:flex;flex-wrap:wrap;gap:0.4rem}
+.pill{
+  font-family:var(--mono);font-size:0.7rem;
+  background:rgba(255,255,255,0.04);border:1px solid var(--border);
+  color:var(--text2);border-radius:4px;padding:3px 8px;
+}
+
+/* ── EXPERIENCE ── */
+#experience{background:var(--bg)}
+.exp-timeline{position:relative;max-width:860px}
+.exp-timeline::before{
+  content:'';position:absolute;left:0;top:8px;bottom:8px;
+  width:2px;background:linear-gradient(to bottom,var(--accent),var(--accent2),transparent);
+  border-radius:2px;
+}
+.exp-item{
+  padding-left:2.5rem;margin-bottom:3rem;position:relative;
+  animation:fadeUp 0.5s ease both;
+}
+.exp-item::before{
+  content:'';position:absolute;left:-5px;top:8px;
+  width:12px;height:12px;border-radius:50%;
+  background:var(--accent);border:2px solid var(--bg);
+  box-shadow:0 0 0 3px rgba(79,142,247,0.2);
+}
+.exp-header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.4rem}
+.exp-role{font-family:var(--display);font-weight:700;font-size:1.15rem;color:var(--text)}
+.exp-period{
+  font-family:var(--mono);font-size:0.72rem;color:var(--text3);
+  background:var(--bg3);border:1px solid var(--border);
+  padding:3px 10px;border-radius:4px;white-space:nowrap;
+}
+.exp-company{
+  font-family:var(--mono);font-size:0.8rem;
+  color:var(--accent);margin-bottom:0.75rem;
+}
+.exp-bullets{list-style:none;display:flex;flex-direction:column;gap:0.45rem}
+.exp-bullets li{
+  font-size:0.9rem;color:var(--text2);
+  padding-left:1.2rem;position:relative;line-height:1.6;
+}
+.exp-bullets li::before{
+  content:'▸';position:absolute;left:0;
+  color:var(--accent);font-size:0.7rem;top:0.2rem;
+}
+.exp-stack{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.75rem}
+
+/* ── PROJECTS ── */
+#projects{background:var(--bg2)}
+.projects-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:1.5rem;
+}
+.proj-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:16px;overflow:hidden;
+  transition:border-color 0.2s,transform 0.2s;
+  display:flex;flex-direction:column;
+}
+.proj-card:hover{border-color:rgba(79,142,247,0.35);transform:translateY(-4px)}
+.proj-banner{
+  height:6px;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+}
+.proj-banner.green{background:linear-gradient(90deg,var(--green),#059669)}
+.proj-banner.orange{background:linear-gradient(90deg,var(--orange),#dc2626)}
+.proj-body{padding:1.5rem;flex:1;display:flex;flex-direction:column}
+.proj-emoji{font-size:2rem;margin-bottom:0.75rem}
+.proj-title{font-family:var(--display);font-weight:700;font-size:1.05rem;margin-bottom:0.5rem;color:var(--text)}
+.proj-desc{font-size:0.875rem;color:var(--text2);line-height:1.7;flex:1;margin-bottom:1rem}
+.proj-stack{display:flex;flex-wrap:wrap;gap:0.35rem;margin-bottom:1rem}
+.proj-link{
+  display:inline-flex;align-items:center;gap:0.4rem;
+  font-family:var(--mono);font-size:0.75rem;color:var(--accent);
+  text-decoration:none;
+  transition:gap 0.2s;
+}
+.proj-link:hover{gap:0.7rem}
+
+/* ── EDUCATION ── */
+#education{background:var(--bg)}
+.edu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
+.edu-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:16px;padding:1.75rem;
+  transition:border-color 0.2s;
+}
+.edu-card:hover{border-color:rgba(124,58,237,0.3)}
+.edu-icon{font-size:2rem;margin-bottom:1rem}
+.edu-degree{font-family:var(--display);font-weight:700;font-size:1rem;color:var(--text);margin-bottom:0.3rem}
+.edu-uni{font-family:var(--mono);font-size:0.78rem;color:var(--accent);margin-bottom:0.25rem}
+.edu-period{font-family:var(--mono);font-size:0.72rem;color:var(--text3);margin-bottom:0.75rem}
+.edu-desc{font-size:0.875rem;color:var(--text2);line-height:1.7}
+
+/* ── CONTACT ── */
+#contact{
+  background:var(--bg2);
+  text-align:center;
+}
+.contact-inner{max-width:600px;margin:0 auto}
+.contact-text{font-size:1rem;color:var(--text2);line-height:1.8;margin-bottom:2.5rem}
+.contact-links{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap}
+.contact-card{
+  display:flex;align-items:center;gap:0.75rem;
+  background:var(--card);border:1px solid var(--border);
+  border-radius:12px;padding:1rem 1.5rem;
+  text-decoration:none;color:var(--text);
+  transition:all 0.2s;
+}
+.contact-card:hover{border-color:var(--accent);transform:translateY(-2px);color:var(--accent)}
+.contact-card i{font-size:1.1rem;color:var(--accent)}
+.contact-label{font-size:0.875rem;font-weight:500}
+.contact-val{font-family:var(--mono);font-size:0.75rem;color:var(--text2)}
+
+/* ── FOOTER ── */
+footer{
+  text-align:center;padding:2rem;
+  font-family:var(--mono);font-size:0.75rem;color:var(--text3);
+  border-top:1px solid var(--border);
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes wave{
+  0%,100%{transform:rotate(0deg)}
+  20%{transform:rotate(14deg)}
+  40%{transform:rotate(-8deg)}
+  60%{transform:rotate(14deg)}
+  80%{transform:rotate(-4deg)}
+}
+.wave{display:inline-block;animation:wave 2.5s ease-in-out infinite}
+.fade-in{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease}
+.fade-in.visible{opacity:1;transform:none}
+
+/* Stagger */
+.stagger > *:nth-child(1){animation-delay:0.05s}
+.stagger > *:nth-child(2){animation-delay:0.12s}
+.stagger > *:nth-child(3){animation-delay:0.19s}
+.stagger > *:nth-child(4){animation-delay:0.26s}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;text-align:center}
+  .hero-avatar{display:none}
+  .hero-eyebrow,.hero-tags,.hero-cta,.social-row{justify-content:center}
+  .hero-desc{margin:0 auto 2.5rem}
+}
+@media(max-width:640px){
+  nav{padding:0 4vw}
+  section{padding:5rem 5vw 3rem}
+  .nav-links{display:none}
+  .nav-links.open{
+    display:flex;flex-direction:column;position:fixed;
+    top:var(--nav-h);left:0;right:0;
+    background:rgba(10,14,26,0.97);
+    padding:1.5rem;gap:1.5rem;
+    border-bottom:1px solid var(--border);
+  }
+  .nav-toggle{display:block}
+  .exp-timeline::before{display:none}
+  .exp-item{padding-left:0}
+  .exp-item::before{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a class="nav-logo" href="#home">NM</a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-bg"></div>
+  <div class="grid-dots"></div>
+  <div class="hero-grid">
+    <div>
+      <div class="hero-eyebrow">Available for remote roles in Spain</div>
+      <h1 class="hero-name">
+        Hey, I'm<br>
+        <span>Naga Munukutla</span>
+      </h1>
+      <p class="hero-role">Senior Cloud &amp; AI Engineer <span class="wave">👋</span></p>
+      <p class="hero-desc">
+        5+ years building secure, scalable cloud-native systems on AWS for satellite
+        telecommunications. Currently leading an <strong style="color:var(--text)">AI digitalization project</strong>
+        that brings predictive intelligence to satellite network operations.
+        Based in Madrid 🇪🇸 — work permit valid until 2028.
+      </p>
+      <div class="hero-tags">
+        <span class="tag">AWS</span>
+        <span class="tag">Python</span>
+        <span class="tag">Terraform</span>
+        <span class="tag">Docker</span>
+        <span class="tag purple">AI Automation</span>
+        <span class="tag purple">Snowflake</span>
+        <span class="tag green">Open to Work</span>
+        <span class="tag green">Remote Spain</span>
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#contact">
+          <i class="fa-solid fa-paper-plane"></i> Get in touch
+        </a>
+        <a class="btn btn-outline" href="#experience">
+          <i class="fa-solid fa-briefcase"></i> My experience
+        </a>
+      </div>
+      <div class="social-row">
+        <a class="social-icon" href="https://linkedin.com/in/satya-munukutla" target="_blank" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a class="social-icon" href="https://github.com/satya-munukutla" target="_blank" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a class="social-icon" href="mailto:naga.munukutla@gmail.com" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+    <div class="hero-avatar">
+      <div class="avatar-initials">NM</div>
+      <div class="avatar-flag">🛰️</div>
+      <div class="avatar-badge">✅ Open to work</div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-label">What I work with</div>
+  <h2 class="section-title">Technical Skills</h2>
+  <p class="section-sub">Production experience across cloud infrastructure, automation, data pipelines, and AI systems.</p>
+  <div class="skills-grid stagger">
+
+    <div class="skill-card fade-in">
+      <div class="skill-card-icon ic-blue"><i class="fa-brands fa-aws"></i></div>
+      <h3>Cloud &amp; Infrastructure</h3>
+      <div class="skill-pills">
+        <span class="pill">Lambda</span><span class="pill">ECS/Fargate</span>
+        <span class="pill">EC2</span><span class="pill">S3</span>
+        <span class="pill">RDS</span><span class="pill">VPC</span>
+        <span class="pill">IAM</span><span class="pill">CloudWatch</span>
+        <span class="pill">API Gateway</span><span class="pill">Secrets Manager</span>
+        <span class="pill">Route 53</span>
+      </div>
+    </div>
+
+    <div class="skill-card fade-in">
+      <div class="skill-card-icon ic-purple"><i class="fa-solid fa-robot"></i></div>
+      <h3>AI &amp; Automation</h3>
+      <div class="skill-pills">
+        <span class="pill">AI Pipeline Design</span>
+        <span class="pill">Scikit-learn</span>
+        <span class="pill">Anomaly Detection</span>
+        <span class="pill">Time-series Forecasting</span>
+        <span class="pill">NLP (spaCy/NLTK)</span>
+        <span class="pill">REST API Integration</span>
+        <span class="pill">Salesforce Automation</span>
+      </div>
+    </div>
+
+    <div class="skill-card fade-in">
+      <div class="skill-card-icon ic-green"><i class="fa-solid fa-code"></i></div>
+      <h3>Languages &amp; Frameworks</h3>
+      <div class="skill-pills">
+        <span class="pill">Python (Advanced)</span>
+        <span class="pill">SQL (Advanced)</span>
+        <span class="pill">Bash</span>
+        <span class="pill">REST APIs</span>
+        <span class="pill">Pandas</span>
+        <span class="pill">Plotly</span>
+        <span class="pill">Flask</span>
+      </div>
+    </div>
+
+    <div class="skill-card fade-in">
+      <div class="skill-card-icon ic-orange"><i class="fa-solid fa-database"></i></div>
+      <h3>Data &amp; DevOps</h3>
+      <div class="skill-pills">
+        <span class="pill">Snowflake</span>
+        <span class="pill">Apache Iceberg</span>
+        <span class="pill">Airflow (MWAA)</span>
+        <span class="pill">MongoDB</span>
+        <span class="pill">Terraform</span>
+        <span class="pill">Docker</span>
+        <span class="pill">Azure DevOps</span>
+        <span class="pill">Git / CI-CD</span>
+        <span class="pill">Jenkins</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-label">Career</div>
+  <h2 class="section-title">Work Experience</h2>
+  <p class="section-sub">5+ years delivering cloud-native engineering for satellite telecommunications clients across Europe, the US, and India.</p>
+  <div class="exp-timeline">
+
+    <div class="exp-item fade-in">
+      <div class="exp-header">
+        <span class="exp-role">Senior Cloud &amp; AI Engineer</span>
+        <span class="exp-period">Jun 2021 – Present</span>
+      </div>
+      <div class="exp-company">Sortis Telecommunications · ST Engineering iDirect · Madrid, Spain</div>
+      <ul class="exp-bullets">
+        <li>Leading an <strong style="color:var(--text)">AI digitalization initiative</strong> — deploying AI-powered pipelines on AWS to automate manual satellite network support workflows and enable predictive incident management.</li>
+        <li>Architected serverless and containerized infrastructure (Lambda, ECS/Fargate, S3, RDS, CloudWatch) for real-time network diagnostics at scale.</li>
+        <li>Built secure REST APIs integrated with customer and internal support platforms, enabling end-to-end automated data flows across satellite operations teams.</li>
+        <li>Implemented time-series forecasting and anomaly detection on satellite telemetry data to detect link degradation before customer impact.</li>
+        <li>Delivered technical training and onboarding for international clients in Germany, the US, and India.</li>
+      </ul>
+      <div class="exp-stack">
+        <span class="pill">Python</span><span class="pill">AWS Lambda</span><span class="pill">ECS/Fargate</span>
+        <span class="pill">Terraform</span><span class="pill">Docker</span><span class="pill">Snowflake</span>
+        <span class="pill">Airflow</span><span class="pill">Scikit-learn</span>
+      </div>
+    </div>
+
+    <div class="exp-item fade-in">
+      <div class="exp-header">
+        <span class="exp-role">Data Engineer Intern</span>
+        <span class="exp-period">Nov 2020 – Jun 2021</span>
+      </div>
+      <div class="exp-company">ADEX Corporation · Spain</div>
+      <ul class="exp-bullets">
+        <li>Built Python data pipelines for real-time industrial sensor data ingestion with automated alarm generation and ELT integration into a control optimization platform.</li>
+        <li>Developed SQL-backed dashboards and analytics tools for power plant performance monitoring and predictive maintenance.</li>
+        <li>Proposed signal-processing enhancements that improved diagnostic accuracy across monitored industrial processes.</li>
+      </ul>
+      <div class="exp-stack">
+        <span class="pill">Python</span><span class="pill">SQL</span><span class="pill">ETL Pipelines</span><span class="pill">Pandas</span>
+      </div>
+    </div>
+
+    <div class="exp-item fade-in">
+      <div class="exp-header">
+        <span class="exp-role">Hardware &amp; Embedded Systems Engineer</span>
+        <span class="exp-period">2016 – 2017</span>
+      </div>
+      <div class="exp-company">MSR Technologies · India</div>
+      <ul class="exp-bullets">
+        <li>Designed sensor-fusion systems and embedded control algorithms on Arduino and Raspberry Pi for home automation and smart parking applications.</li>
+        <li>Programmed microcontrollers in Python and C for real-time data acquisition and process control.</li>
+      </ul>
+      <div class="exp-stack">
+        <span class="pill">Python</span><span class="pill">C</span><span class="pill">Arduino</span><span class="pill">Raspberry Pi</span><span class="pill">Sensor Fusion</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-label">What I've built</div>
+  <h2 class="section-title">Projects</h2>
+  <p class="section-sub">Production-grade systems built from real engineering problems in satellite telecommunications and AI automation.</p>
+  <div class="projects-grid stagger">
+
+    <div class="proj-card fade-in">
+      <div class="proj-banner"></div>
+      <div class="proj-body">
+        <div class="proj-emoji">🛰️</div>
+        <div class="proj-title">AI Network Monitor</div>
+        <p class="proj-desc">Predictive satellite network monitoring system. Isolation Forest anomaly detection on live telemetry, serverless on AWS Lambda, CloudWatch dashboards, SNS alerting — detects link degradation before customer impact.</p>
+        <div class="proj-stack">
+          <span class="pill">Python</span><span class="pill">AWS Lambda</span>
+          <span class="pill">Scikit-learn</span><span class="pill">CloudWatch</span><span class="pill">Terraform</span>
+        </div>
+        <a class="proj-link" href="https://github.com/satya-munukutla/ai-network-monitor" target="_blank">
+          View on GitHub <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="proj-card fade-in">
+      <div class="proj-banner green"></div>
+      <div class="proj-body">
+        <div class="proj-emoji">🤖</div>
+        <div class="proj-title">AI Support Chatbot</div>
+        <p class="proj-desc">NLP-powered telecom support chatbot with 14 intent categories, spaCy entity extraction, Flask + Telegram API deployment, SQL knowledge base retrieval, and automatic ticket creation via REST API. 91.4% intent accuracy.</p>
+        <div class="proj-stack">
+          <span class="pill">Python</span><span class="pill">spaCy</span>
+          <span class="pill">Flask</span><span class="pill">Telegram API</span><span class="pill">PostgreSQL</span>
+        </div>
+        <a class="proj-link" href="https://github.com/satya-munukutla/ai-support-chatbot" target="_blank">
+          View on GitHub <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="proj-card fade-in">
+      <div class="proj-banner" style="background:linear-gradient(90deg,#7c3aed,#4f8ef7)"></div>
+      <div class="proj-body">
+        <div class="proj-emoji">📡</div>
+        <div class="proj-title">Satellite Telemetry Pipeline</div>
+        <p class="proj-desc">ELT pipeline processing ~2.4M telemetry records daily. Bronze → Silver → Gold layers on S3, Airflow (MWAA) orchestration, Snowflake + Apache Iceberg storage with 90-day time-travel. Real-time SNS alerting.</p>
+        <div class="proj-stack">
+          <span class="pill">Python</span><span class="pill">Airflow</span>
+          <span class="pill">Snowflake</span><span class="pill">Apache Iceberg</span><span class="pill">AWS S3</span>
+        </div>
+        <a class="proj-link" href="https://github.com/satya-munukutla/satellite-telemetry-pipeline" target="_blank">
+          View on GitHub <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="proj-card fade-in">
+      <div class="proj-banner orange"></div>
+      <div class="proj-body">
+        <div class="proj-emoji">🚗</div>
+        <div class="proj-title">Parking Violation Detector</div>
+        <p class="proj-desc">Real-time OpenCV surveillance system using MOG2 background subtraction, contour detection, and polygon zone checking to detect unauthorised parking. SMS alerts via Twilio API, SQLite violation log. 94.1% detection accuracy.</p>
+        <div class="proj-stack">
+          <span class="pill">Python</span><span class="pill">OpenCV</span>
+          <span class="pill">Twilio API</span><span class="pill">SQLite</span>
+        </div>
+        <a class="proj-link" href="https://github.com/satya-munukutla/parking-violation-detector" target="_blank">
+          View on GitHub <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="section-label">Background</div>
+  <h2 class="section-title">Education &amp; Certifications</h2>
+  <p class="section-sub">Telecommunications engineering foundation combined with cloud and cybersecurity certifications.</p>
+  <div class="edu-grid stagger">
+
+    <div class="edu-card fade-in">
+      <div class="edu-icon">🎓</div>
+      <div class="edu-degree">MSc Telecommunication Engineering</div>
+      <div class="edu-uni">Universidad de Jaén · Linares, Spain</div>
+      <div class="edu-period">2018 – 2021</div>
+      <div class="edu-desc">Advanced courses in AI applied to telecommunications, networks, and data science. Erasmus+ programme participation. Thesis: Arduino-based photovoltaic energy harvesting system with MPPT control (500+ hours).</div>
+    </div>
+
+    <div class="edu-card fade-in">
+      <div class="edu-icon">⚡</div>
+      <div class="edu-degree">BTech Electronics &amp; Communications Engineering</div>
+      <div class="edu-uni">Andhra University · India</div>
+      <div class="edu-period">2014 – 2018</div>
+      <div class="edu-desc">Communications, electronics, and networking. Hackathons with Cisco and Smart India Hackathon. Startup ideas presented at APXLR8 accelerator programme.</div>
+    </div>
+
+    <div class="edu-card fade-in">
+      <div class="edu-icon">🏅</div>
+      <div class="edu-degree">Certifications</div>
+      <div class="edu-uni">AWS · Microsoft · Cisco</div>
+      <div class="edu-period">2020 – Present</div>
+      <div class="edu-desc">
+        <div style="margin-bottom:0.5rem">☁️ <strong style="color:var(--text)">AWS Cloud Practitioner</strong> — Amazon Web Services</div>
+        <div style="margin-bottom:0.5rem">🔷 <strong style="color:var(--text)">Azure Cloud Concepts</strong> — Microsoft</div>
+        <div style="margin-bottom:0.5rem">🔒 <strong style="color:var(--text)">Cybersecurity Essentials</strong> — Cisco</div>
+        <div style="color:var(--accent);font-family:var(--mono);font-size:0.78rem;margin-top:0.75rem">📚 In progress: AWS Solutions Architect Associate</div>
+      </div>
+    </div>
+
+    <div class="edu-card fade-in">
+      <div class="edu-icon">🌍</div>
+      <div class="edu-degree">Languages</div>
+      <div class="edu-uni">Multilingual · 4 languages</div>
+      <div class="edu-period"></div>
+      <div class="edu-desc">
+        <div style="margin-bottom:0.4rem">🇬🇧 <strong style="color:var(--text)">English</strong> — C1 Fluent</div>
+        <div style="margin-bottom:0.4rem">🇪🇸 <strong style="color:var(--text)">Spanish</strong> — Fluent</div>
+        <div style="margin-bottom:0.4rem">🇮🇳 <strong style="color:var(--text)">Telugu</strong> — Native</div>
+        <div>🇮🇳 <strong style="color:var(--text)">Hindi</strong> — Fluent</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-label">Let's talk</div>
+  <h2 class="section-title">Get In Touch</h2>
+  <div class="contact-inner">
+    <p class="contact-text">
+      I'm open to <strong style="color:var(--text)">fully remote roles in Spain</strong> — Cloud Engineering, AI/MLOps, Platform Engineering, or Data Engineering. Valid work permit (Residencia y Trabajo) until October 2028. No sponsorship needed.
+    </p>
+    <div class="contact-links">
+      <a class="contact-card" href="mailto:naga.munukutla@gmail.com">
+        <i class="fa-solid fa-envelope"></i>
+        <div>
+          <div class="contact-label">Email</div>
+          <div class="contact-val">naga.munukutla@gmail.com</div>
+        </div>
+      </a>
+      <a class="contact-card" href="https://linkedin.com/in/satya-munukutla" target="_blank">
+        <i class="fa-brands fa-linkedin-in"></i>
+        <div>
+          <div class="contact-label">LinkedIn</div>
+          <div class="contact-val">satya-munukutla</div>
+        </div>
+      </a>
+      <a class="contact-card" href="https://github.com/satya-munukutla" target="_blank">
+        <i class="fa-brands fa-github"></i>
+        <div>
+          <div class="contact-label">GitHub</div>
+          <div class="contact-val">satya-munukutla</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>Built by Naga Munukutla · Madrid, Spain 🇪🇸 · <a href="https://github.com/satya-munukutla/satya-munukutla.github.io" style="color:var(--accent);text-decoration:none">View source on GitHub</a></p>
+</footer>
+
+<script>
+// Mobile nav toggle
+const toggle = document.getElementById('nav-toggle');
+const navLinks = document.getElementById('nav-links');
+toggle.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+});
+navLinks.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => navLinks.classList.remove('open'));
+});
+
+// Scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Active nav highlight
+const sections = document.querySelectorAll('section[id]');
+const navA = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => {
+    if(window.scrollY >= s.offsetTop - 120) current = s.id;
+  });
+  navA.forEach(a => {
+    a.style.color = a.getAttribute('href') === '#'+current
+      ? 'var(--accent)' : '';
+  });
+}, {passive:true});
+</script>
+</body>
+</html>
