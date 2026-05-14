@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<meta name="description" content="Naga Munukutla — Senior Cloud & AI Engineer based in Madrid, Spain. AWS, Python, AI automation, satellite telecommunications."/>
-<meta property="og:title" content="Naga Munukutla — Senior Cloud & AI Engineer"/>
-<meta property="og:description" content="5+ years building cloud-native systems on AWS and AI automation pipelines for satellite telecommunications."/>
-<title>Naga Munukutla — Cloud & AI Engineer</title>
+<meta name="description" content="Naga Munukutla — AI Product Lead at Sortis. Building sovereign AI infrastructure, document intelligence platforms, and AI-powered sales automation. Madrid, Spain."/>
+<meta property="og:title" content="Naga Munukutla — AI Product Lead | Sortis"/>
+<meta property="og:description" content="10 years in tech. AI Product Lead building sovereign AI systems: Veltrix Veritas Document Intelligence Platform, Smart Campaign Manager, and private vLLM infrastructure with Zadara Cloud Solutions."/>
+<title>Naga Munukutla — AI Product Lead</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,700;0,900;1,300&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
@@ -335,7 +335,77 @@ footer{
   border-top:1px solid var(--border);
 }
 
-/* ── ANIMATIONS ── */
+/* ── VELTRIX FEATURED CARD ── */
+.proj-card.featured{
+  grid-column: 1 / -1;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  border-color:rgba(124,58,237,0.35);
+  background:linear-gradient(135deg,#131929 60%,#1a1235);
+}
+.proj-card.featured .proj-banner{
+  grid-column:1/-1;
+  height:4px;
+  background:linear-gradient(90deg,#7c3aed,#4f8ef7,#34d399);
+}
+.proj-card.featured .proj-body{grid-column:1/2;border-right:1px solid var(--border)}
+.proj-card.featured .proj-detail{padding:1.5rem;display:flex;flex-direction:column;gap:1rem}
+.sovereign-badge{
+  display:inline-flex;align-items:center;gap:0.4rem;
+  background:rgba(52,211,153,0.1);border:1px solid rgba(52,211,153,0.3);
+  color:var(--green);border-radius:6px;
+  font-family:var(--mono);font-size:0.7rem;padding:4px 10px;
+  margin-bottom:0.75rem;
+}
+.detail-row{display:flex;align-items:flex-start;gap:0.6rem;font-size:0.82rem}
+.detail-row i{color:var(--accent);margin-top:0.15rem;flex-shrink:0;font-size:0.75rem}
+.detail-row span{color:var(--text2);line-height:1.5}
+.detail-row strong{color:var(--text)}
+.arch-table{width:100%;border-collapse:collapse;font-size:0.75rem;margin-top:0.5rem}
+.arch-table th{
+  text-align:left;padding:5px 8px;
+  background:rgba(255,255,255,0.03);
+  color:var(--text3);font-family:var(--mono);
+  border-bottom:1px solid var(--border);font-size:0.68rem;
+  text-transform:uppercase;letter-spacing:0.5px;
+}
+.arch-table td{
+  padding:5px 8px;color:var(--text2);
+  border-bottom:1px solid rgba(255,255,255,0.03);
+  vertical-align:top;
+}
+.arch-table td:first-child{color:var(--text);font-weight:500;white-space:nowrap}
+.expand-btn{
+  background:none;border:1px solid var(--border);border-radius:6px;
+  color:var(--text2);font-family:var(--mono);font-size:0.72rem;
+  padding:5px 12px;cursor:pointer;
+  display:flex;align-items:center;gap:0.4rem;
+  transition:all 0.2s;margin-top:auto;
+}
+.expand-btn:hover{border-color:var(--accent);color:var(--accent)}
+.proj-expand{
+  grid-column:1/-1;
+  max-height:0;overflow:hidden;
+  transition:max-height 0.5s ease,padding 0.3s;
+  border-top:0 solid var(--border);
+}
+.proj-expand.open{
+  max-height:600px;
+  border-top:1px solid var(--border);
+  padding:1.5rem;
+}
+.cap-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:0.75rem}
+.cap-item{
+  background:rgba(255,255,255,0.02);border:1px solid var(--border);
+  border-radius:8px;padding:0.75rem;
+}
+.cap-item strong{display:block;font-size:0.82rem;color:var(--text);margin-bottom:0.3rem}
+.cap-item span{font-size:0.78rem;color:var(--text2);line-height:1.5}
+@media(max-width:800px){
+  .proj-card.featured{grid-template-columns:1fr}
+  .proj-card.featured .proj-body{grid-column:1;border-right:none;border-bottom:1px solid var(--border)}
+  .proj-card.featured .proj-detail{grid-column:1}
+}
 @keyframes fadeUp{
   from{opacity:0;transform:translateY(20px)}
   to{opacity:1;transform:translateY(0)}
@@ -405,25 +475,27 @@ footer{
   <div class="grid-dots"></div>
   <div class="hero-grid">
     <div>
-      <div class="hero-eyebrow">Available for remote roles in Spain</div>
+      <div class="hero-eyebrow">AI Product Lead · Sortis · Madrid, Spain</div>
       <h1 class="hero-name">
         Hey, I'm<br>
         <span>Naga Munukutla</span>
       </h1>
-      <p class="hero-role">Senior Cloud &amp; AI Engineer <span class="wave">👋</span></p>
+      <p class="hero-role">AI Product Lead &amp; Engineer <span class="wave">👋</span></p>
       <p class="hero-desc">
-        5+ years building secure, scalable cloud-native systems on AWS for satellite
-        telecommunications. Currently leading an <strong style="color:var(--text)">AI digitalization project</strong>
-        that brings predictive intelligence to satellite network operations.
-        Based in Madrid 🇪🇸 — work permit valid until 2028.
+        10 years in tech — 6 in IoT, 4 in AI product development. At Sortis I define and execute the AI vertical roadmap,
+        building <strong style="color:var(--text)">sovereign AI infrastructure</strong> and production AI systems
+        in partnership with Zadara Cloud Solutions. Creator of <strong style="color:var(--text)">Veltrix Veritas</strong> —
+        a Document Intelligence Platform that runs entirely on private vLLM with zero data exfiltration.
+        Based in Madrid 🇪🇸, work permit valid until 2028.
       </p>
       <div class="hero-tags">
-        <span class="tag">AWS</span>
+        <span class="tag purple">AI Product Lead</span>
+        <span class="tag purple">Sovereign AI</span>
+        <span class="tag purple">Private vLLM</span>
         <span class="tag">Python</span>
-        <span class="tag">Terraform</span>
-        <span class="tag">Docker</span>
-        <span class="tag purple">AI Automation</span>
-        <span class="tag purple">Snowflake</span>
+        <span class="tag">AWS</span>
+        <span class="tag">LangChain</span>
+        <span class="tag">ChromaDB</span>
         <span class="tag green">Open to Work</span>
         <span class="tag green">Remote Spain</span>
       </div>
@@ -449,8 +521,8 @@ footer{
     </div>
     <div class="hero-avatar">
       <div class="avatar-initials">NM</div>
-      <div class="avatar-flag">🛰️</div>
-      <div class="avatar-badge">✅ Open to work</div>
+      <div class="avatar-flag">🤖</div>
+      <div class="avatar-badge">🧠 AI Product Lead</div>
     </div>
   </div>
 </section>
@@ -477,15 +549,19 @@ footer{
 
     <div class="skill-card fade-in">
       <div class="skill-card-icon ic-purple"><i class="fa-solid fa-robot"></i></div>
-      <h3>AI &amp; Automation</h3>
+      <h3>AI Product &amp; LLM Engineering</h3>
       <div class="skill-pills">
-        <span class="pill">AI Pipeline Design</span>
-        <span class="pill">Scikit-learn</span>
-        <span class="pill">Anomaly Detection</span>
-        <span class="pill">Time-series Forecasting</span>
+        <span class="pill">Private vLLM</span>
+        <span class="pill">LangChain</span>
+        <span class="pill">ChromaDB</span>
+        <span class="pill">RAG Pipelines</span>
+        <span class="pill">Sovereign AI</span>
+        <span class="pill">SearXNG</span>
+        <span class="pill">Streamlit</span>
+        <span class="pill">Qwen/Qwen2.5</span>
+        <span class="pill">Document Intelligence</span>
         <span class="pill">NLP (spaCy/NLTK)</span>
-        <span class="pill">REST API Integration</span>
-        <span class="pill">Salesforce Automation</span>
+        <span class="pill">Scikit-learn</span>
       </div>
     </div>
 
@@ -526,26 +602,44 @@ footer{
 <section id="experience">
   <div class="section-label">Career</div>
   <h2 class="section-title">Work Experience</h2>
-  <p class="section-sub">5+ years delivering cloud-native engineering for satellite telecommunications clients across Europe, the US, and India.</p>
+  <p class="section-sub">10 years in tech — from IoT hardware to cloud infrastructure to AI product leadership. Currently building sovereign AI systems at Sortis in partnership with Zadara Cloud Solutions.</p>
   <div class="exp-timeline">
 
     <div class="exp-item fade-in">
       <div class="exp-header">
+        <span class="exp-role">AI Product Lead</span>
+        <span class="exp-period">2024 – Present</span>
+      </div>
+      <div class="exp-company">Sortis · Zadara Cloud Solutions Partnership · Madrid, Spain</div>
+      <ul class="exp-bullets">
+        <li>Defining and executing the AI vertical's short- and long-term product roadmap — building internal and external AI use cases in collaboration with Zadara Cloud Solutions.</li>
+        <li>Shipped <strong style="color:var(--text)">Veltrix Veritas v2.0</strong> — a Document Intelligence Platform running on private vLLM (Qwen/Qwen2.5-VL-7B-Instruct-AWQ), ChromaDB, and SearXNG with zero data exfiltration.</li>
+        <li>Built <strong style="color:var(--text)">Smart Campaign Manager</strong> — AI-powered B2B campaign generation from product technical documentation, fully on sovereign infrastructure.</li>
+        <li>Built <strong style="color:var(--text)">Geographic Market Demand Analyser</strong> — regional demand mapping from product documentation across 6 global markets.</li>
+        <li>Championing sovereign AI architecture: all LLM inference on private infrastructure, GDPR/SOX/HIPAA-compatible by design.</li>
+      </ul>
+      <div class="exp-stack">
+        <span class="pill">Private vLLM</span><span class="pill">LangChain</span><span class="pill">ChromaDB</span>
+        <span class="pill">SearXNG</span><span class="pill">Streamlit</span><span class="pill">Python</span><span class="pill">Docker</span>
+      </div>
+    </div>
+
+    <div class="exp-item fade-in">
+      <div class="exp-header">
         <span class="exp-role">Senior Cloud &amp; AI Engineer</span>
-        <span class="exp-period">Jun 2021 – Present</span>
+        <span class="exp-period">Jun 2021 – 2024</span>
       </div>
       <div class="exp-company">Sortis Telecommunications · ST Engineering iDirect · Madrid, Spain</div>
       <ul class="exp-bullets">
-        <li>Leading an <strong style="color:var(--text)">AI digitalization initiative</strong> — deploying AI-powered pipelines on AWS to automate manual satellite network support workflows and enable predictive incident management.</li>
+        <li>Led AI digitalization initiative — deploying AI-powered pipelines on AWS to automate satellite network support workflows and enable predictive incident management.</li>
         <li>Architected serverless and containerized infrastructure (Lambda, ECS/Fargate, S3, RDS, CloudWatch) for real-time network diagnostics at scale.</li>
-        <li>Built secure REST APIs integrated with customer and internal support platforms, enabling end-to-end automated data flows across satellite operations teams.</li>
-        <li>Implemented time-series forecasting and anomaly detection on satellite telemetry data to detect link degradation before customer impact.</li>
-        <li>Delivered technical training and onboarding for international clients in Germany, the US, and India.</li>
+        <li>Built secure REST APIs and implemented time-series forecasting and anomaly detection on satellite telemetry data.</li>
+        <li>Delivered technical training for international clients in Germany, the US, and India.</li>
       </ul>
       <div class="exp-stack">
         <span class="pill">Python</span><span class="pill">AWS Lambda</span><span class="pill">ECS/Fargate</span>
         <span class="pill">Terraform</span><span class="pill">Docker</span><span class="pill">Snowflake</span>
-        <span class="pill">Airflow</span><span class="pill">Scikit-learn</span>
+        <span class="pill">Airflow</span>
       </div>
     </div>
 
@@ -587,15 +681,70 @@ footer{
 <section id="projects">
   <div class="section-label">What I've built</div>
   <h2 class="section-title">Projects</h2>
-  <p class="section-sub">Production-grade systems built from real engineering problems in satellite telecommunications and AI automation.</p>
+  <p class="section-sub">Production AI systems and cloud-native infrastructure — from sovereign document intelligence to satellite telemetry pipelines.</p>
   <div class="projects-grid stagger">
 
+    <!-- VELTRIX VERITAS — FEATURED -->
+    <div class="proj-card featured fade-in">
+      <div class="proj-banner"></div>
+      <div class="proj-body">
+        <div class="sovereign-badge"><i class="fa-solid fa-shield-halved"></i> Sovereign AI · Zero Exfiltration</div>
+        <div class="proj-emoji">🧠</div>
+        <div class="proj-title">Veltrix Veritas v2.0</div>
+        <p class="proj-desc">Document Intelligence Platform that transforms a single technical document (PDF, DOCX, PPTX, TXT) into a complete sales intelligence package — competitive analysis, audience profiles, winning arguments, and multi-channel campaigns — entirely on private infrastructure. No data ever leaves your network.</p>
+        <div class="proj-stack">
+          <span class="pill">Private vLLM</span>
+          <span class="pill">Qwen2.5-VL-7B</span>
+          <span class="pill">ChromaDB</span>
+          <span class="pill">LangChain</span>
+          <span class="pill">SearXNG</span>
+          <span class="pill">Streamlit</span>
+          <span class="pill">Docker</span>
+        </div>
+        <button class="expand-btn" onclick="toggleExpand(this)">
+          <i class="fa-solid fa-chevron-down"></i> View full architecture
+        </button>
+      </div>
+      <div class="proj-detail">
+        <div>
+          <div style="font-family:var(--mono);font-size:0.7rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin-bottom:0.6rem">Core capabilities</div>
+          <div class="detail-row"><i class="fa-solid fa-circle-check"></i><span><strong>Language detection</strong> — English, Spanish (Castilian &amp; Latin American), French, German, Italian, Portuguese</span></div>
+          <div class="detail-row" style="margin-top:0.5rem"><i class="fa-solid fa-circle-check"></i><span><strong>Competitive intelligence</strong> — vLLM-powered query generation → self-hosted SearXNG → deduplication</span></div>
+          <div class="detail-row" style="margin-top:0.5rem"><i class="fa-solid fa-circle-check"></i><span><strong>No-hallucination guarantee</strong> — every claim must cite a source page; Sales Coach Bot actively challenges uncited arguments</span></div>
+          <div class="detail-row" style="margin-top:0.5rem"><i class="fa-solid fa-circle-check"></i><span><strong>16 vertical audience profiles</strong> — job titles, departments, company-size ranges per vertical</span></div>
+          <div class="detail-row" style="margin-top:0.5rem"><i class="fa-solid fa-circle-check"></i><span><strong>Contact discovery</strong> — LinkedIn search URLs + RocketReach / Hunter.io / Apollo.io API integrations (no scraping)</span></div>
+        </div>
+        <table class="arch-table">
+          <tr><th>Component</th><th>Technology</th></tr>
+          <tr><td>LLM Engine</td><td>Private vLLM · Qwen/Qwen2.5-VL-7B-Instruct-AWQ</td></tr>
+          <tr><td>Vector Store</td><td>ChromaDB (local, persisted)</td></tr>
+          <tr><td>Search</td><td>SearXNG self-hosted metasearch</td></tr>
+          <tr><td>UI</td><td>Streamlit multi-page (4 modes)</td></tr>
+          <tr><td>Deployment</td><td>On-premise / private cloud (Docker)</td></tr>
+        </table>
+      </div>
+      <div class="proj-expand" id="veltrix-expand">
+        <div style="font-family:var(--mono);font-size:0.72rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin-bottom:1rem">Output modules (v2.0)</div>
+        <div class="cap-grid">
+          <div class="cap-item"><strong>📄 Document Analysis</strong><span>Feature extraction, benefits, use cases, limitations — with confidence scores and page citations</span></div>
+          <div class="cap-item"><strong>🔍 Market Search</strong><span>Discovers 10 competitive alternatives via private SearXNG — no Bing/Google API required</span></div>
+          <div class="cap-item"><strong>💬 Argument Generator</strong><span>Primary arguments, objection handlers, qualification questions — all cited, all in document's language</span></div>
+          <div class="cap-item"><strong>📣 Campaign Planner</strong><span>LinkedIn + Email campaigns with 8-week timeline, KPIs, and audience targeting</span></div>
+          <div class="cap-item"><strong>🎯 Audience Finder</strong><span>16 pre-built vertical profiles — job titles, departments, company-size ranges</span></div>
+          <div class="cap-item"><strong>🤺 Sales Coach Bot</strong><span>AI role-play partner that challenges uncited claims using only document facts</span></div>
+          <div class="cap-item"><strong>🗺️ Geographic Demand</strong><span>Regional demand mapping across 6 global markets from product documentation</span></div>
+          <div class="cap-item"><strong>📤 Export Manager</strong><span>Arguments, chat history, full sessions → JSON / CSV / Markdown</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI NETWORK MONITOR -->
     <div class="proj-card fade-in">
       <div class="proj-banner"></div>
       <div class="proj-body">
         <div class="proj-emoji">🛰️</div>
         <div class="proj-title">AI Network Monitor</div>
-        <p class="proj-desc">Predictive satellite network monitoring system. Isolation Forest anomaly detection on live telemetry, serverless on AWS Lambda, CloudWatch dashboards, SNS alerting — detects link degradation before customer impact.</p>
+        <p class="proj-desc">Predictive satellite network monitoring. Isolation Forest anomaly detection on live telemetry, serverless on AWS Lambda, CloudWatch dashboards, SNS alerting — detects link degradation before customer impact.</p>
         <div class="proj-stack">
           <span class="pill">Python</span><span class="pill">AWS Lambda</span>
           <span class="pill">Scikit-learn</span><span class="pill">CloudWatch</span><span class="pill">Terraform</span>
@@ -606,6 +755,7 @@ footer{
       </div>
     </div>
 
+    <!-- AI SUPPORT CHATBOT -->
     <div class="proj-card fade-in">
       <div class="proj-banner green"></div>
       <div class="proj-body">
@@ -622,6 +772,7 @@ footer{
       </div>
     </div>
 
+    <!-- SATELLITE TELEMETRY PIPELINE -->
     <div class="proj-card fade-in">
       <div class="proj-banner" style="background:linear-gradient(90deg,#7c3aed,#4f8ef7)"></div>
       <div class="proj-body">
@@ -638,6 +789,7 @@ footer{
       </div>
     </div>
 
+    <!-- PARKING VIOLATION DETECTOR -->
     <div class="proj-card fade-in">
       <div class="proj-banner orange"></div>
       <div class="proj-body">
@@ -715,7 +867,7 @@ footer{
   <h2 class="section-title">Get In Touch</h2>
   <div class="contact-inner">
     <p class="contact-text">
-      I'm open to <strong style="color:var(--text)">fully remote roles in Spain</strong> — Cloud Engineering, AI/MLOps, Platform Engineering, or Data Engineering. Valid work permit (Residencia y Trabajo) until October 2028. No sponsorship needed.
+      Currently <strong style="color:var(--text)">AI Product Lead at Sortis</strong>, building sovereign AI infrastructure with Zadara Cloud Solutions. Open to senior AI product, MLOps, or platform engineering roles — fully remote within Spain. Valid work permit (Residencia y Trabajo) until October 2028. No sponsorship needed.
     </p>
     <div class="contact-links">
       <a class="contact-card" href="mailto:naga.munukutla@gmail.com">
@@ -745,10 +897,19 @@ footer{
 
 <!-- FOOTER -->
 <footer>
-  <p>Built by Naga Munukutla · Madrid, Spain 🇪🇸 · <a href="https://github.com/satya-munukutla/satya-munukutla.github.io" style="color:var(--accent);text-decoration:none">View source on GitHub</a></p>
+  <p>Naga Munukutla · AI Product Lead · Madrid, Spain 🇪🇸 · <a href="https://github.com/satya-munukutla/satya-munukutla.github.io" style="color:var(--accent);text-decoration:none">View source on GitHub</a></p>
 </footer>
 
 <script>
+// Veltrix expand panel
+function toggleExpand(btn) {
+  const panel = document.getElementById('veltrix-expand');
+  const icon = btn.querySelector('i');
+  panel.classList.toggle('open');
+  icon.style.transform = panel.classList.contains('open') ? 'rotate(180deg)' : '';
+  btn.childNodes[1].textContent = panel.classList.contains('open') ? ' Hide details' : ' View full architecture';
+}
+
 // Mobile nav toggle
 const toggle = document.getElementById('nav-toggle');
 const navLinks = document.getElementById('nav-links');
