@@ -4,6 +4,42 @@ import {bigProjects} from "../../portfolio";
 import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
 
+function ProjectMedia({media, projectName}) {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  if (!media || media.length === 0) {
+    return null;
+  }
+
+  const active = media[activeIndex];
+
+  return (
+    <figure className="project-media">
+      <img src={active.src} alt={active.alt || `${projectName} screenshot`} />
+      {active.caption && <figcaption>{active.caption}</figcaption>}
+      {media.length > 1 && (
+        <div className="project-media-thumbs">
+          {media.map((m, i) => (
+            <button
+              type="button"
+              key={i}
+              className={
+                i === activeIndex
+                  ? "project-media-thumb project-media-thumb-active"
+                  : "project-media-thumb"
+              }
+              onClick={() => setActiveIndex(i)}
+              aria-label={`Show screenshot ${i + 1} of ${media.length}`}
+            >
+              <img src={m.src} alt="" />
+            </button>
+          ))}
+        </div>
+      )}
+    </figure>
+  );
+}
+
 export default function StartupProject() {
   const {isDark} = useContext(StyleContext);
   const projects = bigProjects.projects;
@@ -134,18 +170,10 @@ export default function StartupProject() {
                         {project.projectDesc}
                       </p>
 
-                      {project.media && (
-                        <figure className="project-media">
-                          <img
-                            src={project.media.src}
-                            alt={project.media.alt || `${project.projectName} screenshot`}
-                            loading="lazy"
-                          />
-                          {project.media.caption && (
-                            <figcaption>{project.media.caption}</figcaption>
-                          )}
-                        </figure>
-                      )}
+                      <ProjectMedia
+                        media={project.media}
+                        projectName={project.projectName}
+                      />
 
                       <div className="project-detail-grid">
                         {project.problem && (

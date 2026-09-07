@@ -274,6 +274,13 @@ const bigProjects = {
       projectName: "NexSignal",
       tagline: "Cellular Signal Intelligence & Dual-SIM Switching",
       status: "Active development",
+      media: [
+        {
+          src: require("./assets/images/screenshots/nexsignal-coverage-map.webp"),
+          alt: "NexSignal coverage map showing device signal paths and weak/dead zone clusters across the Madrid region",
+          caption: "Fleet coverage map — device paths, weak/dead zone clusters, and per-operator signal overlays"
+        }
+      ],
       projectDesc:
         "An Android app that gives real intelligence about cellular signal quality — not just a bar count — and automatically switches between SIM cards on dual-SIM devices to keep the best available connection, built for the Orange Spain market.",
       problem:
@@ -302,6 +309,18 @@ const bigProjects = {
       projectName: "SLM — Server Lifecycle Manager",
       tagline: "Full-Stack Internal IT Platform",
       status: "Production",
+      media: [
+        {
+          src: require("./assets/images/screenshots/slm-vpn-credentials.png"),
+          alt: "SLM's VPN connection modal validating credentials, step one of the two-step authentication flow",
+          caption: "Two-step VPN authentication — step one: credential validation"
+        },
+        {
+          src: require("./assets/images/screenshots/slm-vpn-otp.png"),
+          alt: "SLM's VPN connection modal requesting a one-time password token, step two of the authentication flow",
+          caption: "Step two: OTP token before the VPN connection is granted"
+        }
+      ],
       projectDesc:
         "A single pane of glass for the Sortis infrastructure team — server inventory, encrypted credentials, two-step VPN access, and full audit logging, replacing a mix of spreadsheets and tribal knowledge. In production at slm.sortis.es.",
       problem:
