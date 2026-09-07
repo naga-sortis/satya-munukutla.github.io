@@ -207,6 +207,38 @@
   white-space: nowrap;
 }
 
+.project-media {
+  margin: 1rem 0 0 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid $lightBorder1;
+  box-shadow: $lightBoxShadow 0px 8px 20px -10px;
+}
+
+.dark-mode .project-media {
+  border-color: $darkBoxShadow;
+}
+
+.project-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.project-media figcaption {
+  padding: 0.5rem 0.85rem;
+  font-size: 0.78rem;
+  color: $cardSubtitle;
+  background-color: $lightBackground3;
+  border-top: 1px solid $lightBorder1;
+}
+
+.dark-mode .project-media figcaption {
+  color: $darkBoxShadow;
+  background-color: #20263a;
+  border-top-color: $darkBoxShadow;
+}
+
 .project-detail-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

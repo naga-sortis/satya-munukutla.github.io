@@ -134,6 +134,19 @@ export default function StartupProject() {
                         {project.projectDesc}
                       </p>
 
+                      {project.media && (
+                        <figure className="project-media">
+                          <img
+                            src={project.media.src}
+                            alt={project.media.alt || `${project.projectName} screenshot`}
+                            loading="lazy"
+                          />
+                          {project.media.caption && (
+                            <figcaption>{project.media.caption}</figcaption>
+                          )}
+                        </figure>
+                      )}
+
                       <div className="project-detail-grid">
                         {project.problem && (
                           <div className="project-detail-block">
