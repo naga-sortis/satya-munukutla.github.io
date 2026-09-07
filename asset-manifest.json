@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/satya-munukutla.github.io/static/css/main.98105665.css",
-    "main.js": "/satya-munukutla.github.io/static/js/main.01f2982d.js",
+    "main.css": "/satya-munukutla.github.io/static/css/main.5acb3128.css",
+    "main.js": "/satya-munukutla.github.io/static/js/main.59f0ddb5.js",
     "static/css/64.bba8fa55.chunk.css": "/satya-munukutla.github.io/static/css/64.bba8fa55.chunk.css",
     "static/js/64.56dc6704.chunk.js": "/satya-munukutla.github.io/static/js/64.56dc6704.chunk.js",
     "static/css/769.b3cbb36b.chunk.css": "/satya-munukutla.github.io/static/css/769.b3cbb36b.chunk.css",
@@ -18,15 +18,15 @@
     "static/media/azure-badge.svg": "/satya-munukutla.github.io/static/media/azure-badge.4312815e4a1c22e4cb390ffe7917de7f.svg",
     "static/media/cisco-badge.svg": "/satya-munukutla.github.io/static/media/cisco-badge.80937d2c0f11b6b8ec05a56cee50424b.svg",
     "static/media/sortis-logo.svg": "/satya-munukutla.github.io/static/media/sortis-logo.a987673d78f78f297ad795458268ff68.svg",
-    "main.98105665.css.map": "/satya-munukutla.github.io/static/css/main.98105665.css.map",
-    "main.01f2982d.js.map": "/satya-munukutla.github.io/static/js/main.01f2982d.js.map",
+    "main.5acb3128.css.map": "/satya-munukutla.github.io/static/css/main.5acb3128.css.map",
+    "main.59f0ddb5.js.map": "/satya-munukutla.github.io/static/js/main.59f0ddb5.js.map",
     "64.bba8fa55.chunk.css.map": "/satya-munukutla.github.io/static/css/64.bba8fa55.chunk.css.map",
     "64.56dc6704.chunk.js.map": "/satya-munukutla.github.io/static/js/64.56dc6704.chunk.js.map",
     "769.b3cbb36b.chunk.css.map": "/satya-munukutla.github.io/static/css/769.b3cbb36b.chunk.css.map",
     "769.47d64479.chunk.js.map": "/satya-munukutla.github.io/static/js/769.47d64479.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.98105665.css",
-    "static/js/main.01f2982d.js"
+    "static/css/main.5acb3128.css",
+    "static/js/main.59f0ddb5.js"
   ]
 }
