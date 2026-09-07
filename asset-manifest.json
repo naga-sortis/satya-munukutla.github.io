@@ -1,13 +1,16 @@
 {
   "files": {
     "main.css": "/satya-munukutla.github.io/static/css/main.1c46e510.css",
-    "main.js": "/satya-munukutla.github.io/static/js/main.27fcd9ad.js",
+    "main.js": "/satya-munukutla.github.io/static/js/main.a21de79f.js",
     "static/css/64.bba8fa55.chunk.css": "/satya-munukutla.github.io/static/css/64.bba8fa55.chunk.css",
     "static/js/64.56dc6704.chunk.js": "/satya-munukutla.github.io/static/js/64.56dc6704.chunk.js",
     "static/css/769.b3cbb36b.chunk.css": "/satya-munukutla.github.io/static/css/769.b3cbb36b.chunk.css",
     "static/js/769.47d64479.chunk.js": "/satya-munukutla.github.io/static/js/769.47d64479.chunk.js",
     "static/media/nexsignal-coverage-map.webp": "/satya-munukutla.github.io/static/media/nexsignal-coverage-map.7c3444a726a9ac74749c.webp",
     "static/media/Montserrat-Regular.ttf": "/satya-munukutla.github.io/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
+    "static/media/veritas-results-navigation.png": "/satya-munukutla.github.io/static/media/veritas-results-navigation.acae21ce35c432ac2dbb.png",
+    "static/media/veritas-processing.png": "/satya-munukutla.github.io/static/media/veritas-processing.6b427ef878dc140a4ec4.png",
+    "static/media/veritas-upload-vertical.png": "/satya-munukutla.github.io/static/media/veritas-upload-vertical.d6316f8062fc7dd18573.png",
     "static/media/Agustina.woff": "/satya-munukutla.github.io/static/media/Agustina.eb0c59dda4cc308cba96.woff",
     "static/media/manOnTable.svg": "/satya-munukutla.github.io/static/media/manOnTable.8f117eb207e57ed8f89d67d595aceb45.svg",
     "static/media/slm-vpn-otp.png": "/satya-munukutla.github.io/static/media/slm-vpn-otp.6bce6db45ca6cf16c39c.png",
@@ -22,7 +25,7 @@
     "static/media/cisco-badge.svg": "/satya-munukutla.github.io/static/media/cisco-badge.80937d2c0f11b6b8ec05a56cee50424b.svg",
     "static/media/sortis-logo.svg": "/satya-munukutla.github.io/static/media/sortis-logo.a987673d78f78f297ad795458268ff68.svg",
     "main.1c46e510.css.map": "/satya-munukutla.github.io/static/css/main.1c46e510.css.map",
-    "main.27fcd9ad.js.map": "/satya-munukutla.github.io/static/js/main.27fcd9ad.js.map",
+    "main.a21de79f.js.map": "/satya-munukutla.github.io/static/js/main.a21de79f.js.map",
     "64.bba8fa55.chunk.css.map": "/satya-munukutla.github.io/static/css/64.bba8fa55.chunk.css.map",
     "64.56dc6704.chunk.js.map": "/satya-munukutla.github.io/static/js/64.56dc6704.chunk.js.map",
     "769.b3cbb36b.chunk.css.map": "/satya-munukutla.github.io/static/css/769.b3cbb36b.chunk.css.map",
@@ -30,6 +33,6 @@
   },
   "entrypoints": [
     "static/css/main.1c46e510.css",
-    "static/js/main.27fcd9ad.js"
+    "static/js/main.a21de79f.js"
   ]
 }
