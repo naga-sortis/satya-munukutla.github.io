@@ -25,7 +25,7 @@ const greeting = {
   subTitle: emoji(
     "AI Product Lead building sovereign AI infrastructure — private LLM systems, document intelligence, and RAG platforms that run entirely on infrastructure I control. No commercial LLM APIs, no data leaving the network."
   ),
-  resumeLink: "/resume.pdf",
+  resumeLink: `${process.env.PUBLIC_URL}/resume.pdf`,
   displayGreeting: true
 };
 
@@ -191,15 +191,90 @@ const openSource = {
 };
 
 // Some big projects you have worked on
+// Rendered as an interactive, slide-able carousel — see StartupProject.js
 
 const bigProjects = {
   title: "Big Projects",
   subtitle: "SOVEREIGN AI PRODUCTS & PLATFORMS I'VE BUILT",
   projects: [
     {
-      projectName: "Veltrix Sage & Beacon",
+      projectName: "Veltrix Veritas v2.0",
+      tagline: "Document Intelligence Platform",
+      status: "Production",
       projectDesc:
-        "Two sovereign AI products on the same private stack — Sage lets teams query organisational knowledge, Beacon surfaces that knowledge from Microsoft 365 (SharePoint, Teams, OneDrive). Private vLLM inference, ChromaDB vector store, zero data exfiltration.",
+        "Takes a single technical document and produces a complete sales intelligence package — competitive analysis, evidence-backed arguments, audience profiles, and campaign plans — without the document ever leaving the network.",
+      problem:
+        "Turning a technical document into a sales-ready story — competitive positioning, audience-specific messaging, campaign copy — is slow, manual work, and commercial AI tools require sending that document to an external API.",
+      solution:
+        "Veritas ingests one technical document and privately generates a full sales intelligence package: competitive analysis via a self-hosted SearXNG search layer, winning arguments backed by evidence citations, audience profiles across 16 industry verticals, and multi-channel campaign plans — all on infrastructure I control.",
+      features: [
+        "Self-hosted SearXNG competitive analysis — no external search API",
+        "Evidence-cited argument generation, not unsourced claims",
+        "Audience profiling across 16 industry verticals",
+        "Multi-channel campaign plan generation",
+        "Zero data leaves the network at any point"
+      ],
+      techStack: [
+        "Private vLLM (Qwen/Qwen2.5-VL-7B-Instruct-AWQ)",
+        "ChromaDB",
+        "LangChain",
+        "Self-hosted SearXNG"
+      ],
+      footerLink: []
+    },
+    {
+      projectName: "Veltrix Sage",
+      tagline: "Organisational Knowledge Query Engine",
+      status: "Production v1.0",
+      projectDesc:
+        "Lets teams query their own organisational knowledge in natural language — documents, wikis, structured knowledge — with every answer cited back to its source, entirely on private infrastructure.",
+      problem:
+        "Enterprise teams accumulate enormous institutional knowledge in documents, wikis, and threads. Finding the right piece means already knowing where to look — and commercial tools like Copilot or Notion AI solve this by sending your content to an external AI API, which isn't viable for data-sovereignty-bound companies.",
+      solution:
+        "Sage indexes organisational content into a local ChromaDB vector store and answers questions using a private LLM inference server — the same sovereign stack as Veritas. No content leaves the network at any point.",
+      features: [
+        "Natural language query over any ingested knowledge base",
+        "Source attribution — every answer cites the document and section it came from",
+        "Confidence indicators on all responses",
+        "Bilingual interface (Spanish / English), auto-detected from the query",
+        "GDPR compliance mapping — data classification and retention metadata per document"
+      ],
+      techStack: [
+        "FastAPI backend",
+        "Streamlit UI",
+        "ChromaDB vector store",
+        "Private vLLM (Qwen-compatible)",
+        "On-premise Ubuntu deployment"
+      ],
+      footerLink: [
+        {
+          name: "GitHub",
+          url: "https://github.com/naga-sortis/Veltrix_beacon_sage"
+        }
+      ]
+    },
+    {
+      projectName: "Veltrix Beacon",
+      tagline: "Microsoft 365 Knowledge Discovery",
+      status: "Production",
+      projectDesc:
+        "Sage's companion product — surfaces organisational knowledge straight out of SharePoint, Teams, OneDrive, and Outlook via cross-platform PC agents, respecting Microsoft 365's own permission model.",
+      problem:
+        "The same institutional-knowledge problem Sage solves, but scattered across SharePoint, Teams, OneDrive, and Outlook — and any agent that indexes it has to respect who is actually allowed to see what.",
+      solution:
+        "Cross-platform PC agents index Microsoft 365 content into the same local ChromaDB store Sage queries from, incrementally re-embedding only new or modified content, and strictly honouring the M365 permission model so a user only ever retrieves what they already have access to.",
+      features: [
+        "Cross-platform PC agents indexing SharePoint, Teams, OneDrive, and Outlook",
+        "Incremental indexing — only new or modified content is re-embedded",
+        "Permission-aware ingestion — no privilege escalation, ever",
+        "Same query interface as Sage once content is indexed"
+      ],
+      techStack: [
+        "Python cross-platform PC agents",
+        "ChromaDB vector store",
+        "FastAPI + Streamlit",
+        "Private vLLM inference"
+      ],
       footerLink: [
         {
           name: "GitHub",
@@ -209,8 +284,30 @@ const bigProjects = {
     },
     {
       projectName: "NexSignal",
+      tagline: "Cellular Signal Intelligence & Dual-SIM Switching",
+      status: "Active development",
       projectDesc:
-        "Android app that gives real cellular signal intelligence and automatically switches between SIM cards on dual-SIM devices to maintain the best available connection — built for the Orange Spain market.",
+        "An Android app that gives real intelligence about cellular signal quality — not just a bar count — and automatically switches between SIM cards on dual-SIM devices to keep the best available connection, built for the Orange Spain market.",
+      problem:
+        "Dual-SIM phones are common in Spain, but Android's native SIM management is manual — users have to guess which SIM is better right now with no real-time signal intelligence. Carriers, meanwhile, lack fine-grained crowdsourced signal data from real devices in real-world conditions.",
+      solution:
+        "NexSignal runs continuously in the background, collecting signal metrics from both SIMs, comparing them in real time, and automatically switching the active data SIM when a configured quality threshold is crossed. Signal data is also aggregated — anonymised, opt-in — for carrier-side network intelligence.",
+      features: [
+        "Real-time signal monitoring — RSSI, RSRP, RSRQ, SINR per SIM",
+        "Automatic carrier switching on signal-quality differential, no user interaction needed",
+        "GPS-tagged signal map showing quality history by location",
+        "Network technology and frequency band detection per SIM",
+        "Full switching log with reason and signal values at time of switch",
+        "Opt-in, anonymised analytics for carrier network intelligence (Orange Spain)",
+        "Battery-aware, user-configurable sampling thresholds"
+      ],
+      techStack: [
+        "Android (native)",
+        "TelephonyManager / SubscriptionManager / SignalStrength APIs",
+        "SQLite",
+        "Mapbox / OpenStreetMap",
+        "Python (FastAPI) analytics backend"
+      ],
       footerLink: [
         {
           name: "GitHub",
@@ -220,8 +317,29 @@ const bigProjects = {
     },
     {
       projectName: "SLM — Server Lifecycle Manager",
+      tagline: "Full-Stack Internal IT Platform",
+      status: "Production",
       projectDesc:
-        "Internal IT operations platform managing server lifecycle, credentials, and VPN access across the organisation — Vue 3 / Django REST Framework / PostgreSQL / Celery. In production at slm.sortis.es.",
+        "A single pane of glass for the Sortis infrastructure team — server inventory, encrypted credentials, two-step VPN access, and full audit logging, replacing a mix of spreadsheets and tribal knowledge. In production at slm.sortis.es.",
+      problem:
+        "The infrastructure team was managing servers, credentials, and VPN access through spreadsheets, shared documents, and tribal knowledge — with no lifecycle tracking, no access control, and no audit trail.",
+      solution:
+        "SLM covers the full lifecycle of a server or service: provisioning records, encrypted credential management with export, a two-step-authenticated VPN connection flow, and ongoing operational state tracking — all behind role-based access control.",
+      features: [
+        "Server inventory — provisioning date, hardware specs, assigned services, state, ownership",
+        "Encrypted credential storage with role-based export",
+        "Two-step-authenticated VPN connection modal",
+        "Async task processing via Celery — credential rotation, bulk exports, state sync",
+        "Full audit logging — every credential access, export, and state change",
+        "Role-based access control — admin, engineer, and read-only roles"
+      ],
+      techStack: [
+        "Vue 3 (Composition API)",
+        "Django 5 + Django REST Framework",
+        "PostgreSQL",
+        "Celery + Redis",
+        "Nginx"
+      ],
       footerLink: [
         {
           name: "Live site",
@@ -231,6 +349,160 @@ const bigProjects = {
     }
   ],
   display: true
+};
+
+// Founding — Praxa (working name: Praxis) company brief
+// A working, pre-clearance venture brief — kept honest and unpolished on purpose.
+
+const foundingSection = {
+  title: "Founding Praxa",
+  subtitle: "A company brief in progress — working name, naming clearance not yet complete.",
+  display: true,
+  workingName: "Praxis",
+  recommendedName: "Praxa",
+  workingNameNote:
+    "Working name in this brief: Praxis. Trademark clearance is not complete — see the Naming tab before treating this as final.",
+  thesis: {
+    statement:
+      "People and organisations make enormous decisions about the distance between home and work, with almost no data about what that distance actually costs.",
+    points: [
+      {
+        scale: "Once, across borders",
+        desc: "Someone weighs relocating to another country and has no honest picture of what changes — cost, taxes, healthcare, schooling, disposable income, paperwork burden.",
+        product: "NestGo"
+      },
+      {
+        scale: "Daily, across a city",
+        desc: "A company mandates office attendance, signs a lease, sets shift timings — with no measurement of the productive hours the resulting commute destroys.",
+        product: "Radius"
+      }
+    ],
+    closing: "Same underlying question. Different scale, different buyer, same company."
+  },
+  houseStyle:
+    "Decision support that ends in a finished artifact, not an insight. NestGo does not stop at a cost-of-living comparison — it fills the visa forms. Radius must not stop at a dashboard — it generates the disclosure, the policy draft, the municipal submission. Rule of thumb: if the user still has to do the tedious part afterwards, the product isn't finished.",
+  naming: {
+    chosen: "Praxis",
+    meaning: "Turning theory into practice — names the company's house style.",
+    conflicts: [
+      {
+        entity: "Praxis Labs (US)",
+        note: "Enterprise workplace software; clients include eBay, Uber, Amazon, Etsy, ServiceNow, Target. Same buyer as Radius — highest-risk conflict."
+      },
+      {
+        entity: "Praxis (praxisnation.com)",
+        note: "\"Internet-native nation,\" plans a Mediterranean city. Adjacent to Radius's civic-infrastructure positioning."
+      },
+      {
+        entity: "Praxis / Altran Praxis (UK)",
+        note: "Safety-critical software house, later absorbed into Altran. Had a Bangalore office."
+      },
+      { entity: "Praxis Solutions", note: "Salesforce / Rootstock ERP consultancy." },
+      { entity: "praxis.co", note: "Faith-based venture-building ecosystem." },
+      { entity: "Praxis (Isaac Morehouse)", note: "US apprenticeship / career programme." },
+      { entity: "Praxis.tech", note: "Generative-AI software company." }
+    ],
+    assessment:
+      "The risk is not litigation, it is unownability — crowded search results, unavailable premium domains, and probable blocks in Nice classes 9 and 42. Proceeding is a legitimate choice, but it should be a knowing one.",
+    recommended:
+      "Praxa — same meaning, coined rather than dictionary, therefore clearable and ownable. Secondary options: Poros (Greek: passage / resourcefulness), Ergon (Greek: work).",
+    rejected:
+      "Odos — collides with a funded Spanish/Irish agri-food climate-tech startup: same country, same buyer type, same regulatory framework as the Radius EU wedge.",
+    lesson:
+      "Dictionary words — especially Greek ones — are taken. Coined names clear trademarks. Run EUIPO + Spanish + Indian registry searches, classes 9 and 42, plus domain and LinkedIn, before committing."
+  },
+  nestgo: {
+    status: "Existing product concept",
+    forWhom: "Expats, students, tourists, and employees in relocation programmes.",
+    does: [
+      "Compares living in the home country vs. the destination country",
+      "Auto-fills destination-country visa forms from a passport scan, adapted to applicant type — student, tourist, or employee relocation"
+    ],
+    why: "The comparison earns trust; the form-filling is the thing people actually pay for."
+  },
+  radius: {
+    status: "Concept stage",
+    origin:
+      "The Bengaluru \"shut down the IT parks and let us work from home\" problem — employees losing productive hours to traffic and broken roads. India-visible today, structurally global.",
+    framing:
+      "Do not position this as solving traffic — software cannot fix roads, and any product that claims to will fail. Radius owns the decision layer above the traffic.",
+    functions: [
+      {
+        name: "Measure",
+        desc: "Passive, consented, aggregate-only door-to-desk travel time. The critical metric is variance, not average — a predictable 60-minute commute is survivable; a 35-to-95-minute commute forces daily worst-case buffering and is what actually drives attrition. Nobody measures variance today."
+      },
+      {
+        name: "Decide",
+        desc: "Executive-facing recommendations: which teams on which days, satellite hub vs. headquarters seat, staggered start times, true hours-cost of a specific lease."
+      },
+      {
+        name: "Escalate",
+        desc: "Anonymised aggregate delay data as infrastructure evidence, exportable to municipal bodies, industry associations, and business-park operators."
+      }
+    ],
+    moat:
+      "Don't sell a dashboard — dashboards are commodities. Define and own a standard unit: the Commute Drag Index — productive hours lost per employee per month, variance weighted above mean. If that number gets cited in an ESG report, a lease negotiation, or a council session, Praxa becomes the definition rather than a vendor.",
+    wedge: [
+      {
+        market: "EU",
+        buyer: "Sustainability / compliance lead",
+        pitch: "CSRD Scope 3 Category 7 measured properly, not survey-guessed",
+        urgency: "Regulatory deadline"
+      },
+      {
+        market: "India",
+        buyer: "COO / Head of Workplace",
+        pitch: "Recover productive hours, cut attrition",
+        urgency: "Cost and retention pressure"
+      }
+    ],
+    competitiveGap: [
+      { who: "Google Maps / Waze", gap: "Optimise one person's next trip. No memory, no aggregate, no organisation." },
+      { who: "MoveInSync / Routematic / Cityflo", gap: "Execute transport after someone has already decided everyone commutes. Logistics, not strategy." },
+      { who: "Robin / Envoy / OfficeSpace", gap: "Desk booking. Know who reserved a seat, not what reaching it cost." },
+      { who: "Civic apps (Sahaaya, FixMyStreet)", gap: "Complaints with no economic weight attached." }
+    ],
+    seam: "Unoccupied seam: between workplace software and civic infrastructure reality.",
+    risks: [
+      "Trust — if employees read this as surveillance, adoption dies on day one. Aggregation guarantees must be architectural, not a privacy-policy paragraph.",
+      "Civic sales are slow — treat municipal impact as a credibility story, not a revenue line.",
+      "Density requirement — infrastructure evidence is worthless below critical mass. First market must be one dense corridor, not a broad rollout."
+    ]
+  },
+  decisions: [
+    {
+      question: "First Radius corridor",
+      decision: "Bengaluru first, EU pilot second",
+      consequence: "Reverses the original funding sequencing — see Sequencing below"
+    },
+    {
+      question: "Data collection",
+      decision: "Opt-in app; coarse geohash for home location; no raw GPS trails; aggregation floor on all reporting",
+      consequence: "Slower adoption, far lower legal and reputational risk"
+    },
+    {
+      question: "NestGo ↔ Radius data",
+      decision: "Stay separate",
+      consequence: "Shared identity/billing infra is fine; datasets do not mix, keeping NestGo out of Radius's privacy regime"
+    },
+    {
+      question: "Legal entity",
+      decision: "Both Spain and India",
+      consequence: "Two filing sets, transfer pricing, and an EU → India transfer requiring SCCs. Structure — parent vs. subsidiary — still to be advised by counsel"
+    }
+  ],
+  sequencing:
+    "Build where the pain is loudest. Bengaluru validates whether the Commute Drag Index measures anything real — EU sustainability leads cannot tell you that, Whitefield commuters can in week one. Cost of this choice: smaller deal sizes, discretionary rather than deadline-driven buying, no regulatory forcing function. Binding constraint: the EU disclosure path must still be designed into the data model from day one, even while selling only in India — not as a shipped feature, but the schema must be able to produce a compliance-grade Scope 3 Category 7 figure without a rewrite. Retrofitting provenance onto an operational dashboard is a rebuild, not a feature.",
+  dataRationale:
+    "Opt-in app was chosen over calendar/badge inference deliberately. Inference appears less invasive because it avoids GPS, but it operates without active employee consent and yields attendance data — precisely what makes employees read the product as surveillance. Opt-in is harder to adopt and much harder to be sued over. Both India's DPDP Act and GDPR apply.",
+  founderNote: {
+    constraint: "Solo founder, no external funding. This is the binding constraint and it reorders the roadmap.",
+    reasoning:
+      "Radius needs several employers on one corridor before it produces anything of value — i.e. enterprise sales, with procurement, security review, and a privacy conversation per customer. One unfunded person cannot run that motion while also building a second product. The sales cycle alone outlasts the runway.",
+    therefore: "NestGo funds Praxa. Radius is what NestGo revenue buys.",
+    corollary:
+      "Delay dual incorporation — two entities means recurring accounting, filings, and social-security obligations in two jurisdictions before any revenue exists. Operating as autónomo in Spain first is materially cheaper than an SL; the crossover point depends on income. Consult a gestor. (Not tax advice.)"
+  }
 };
 
 // Achievement Section
@@ -336,5 +608,6 @@ export {
   contactInfo,
   twitterDetails,
   isHireable,
-  resumeSection
+  resumeSection,
+  foundingSection
 };

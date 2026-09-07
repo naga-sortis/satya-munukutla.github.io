@@ -1,0 +1,293 @@
+@import "../../_globalColor";
+
+.founding-header {
+  text-align: center;
+}
+
+.founding-disclaimer {
+  max-width: 640px;
+  margin: 0.75rem auto 0 auto;
+  background-color: rgba(230, 126, 34, 0.12);
+  border: 1px solid rgba(230, 126, 34, 0.35);
+  color: #a35a10;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+.dark-mode .founding-disclaimer {
+  background-color: rgba(230, 126, 34, 0.18);
+  color: #ffb066;
+}
+
+.founding-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 2rem 0 1.5rem 0;
+}
+
+.founding-tab {
+  border: 1px solid $lightBorder1;
+  background-color: $lightBackground2;
+  color: $cardSubtitle;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+
+.founding-tab:hover {
+  border-color: $buttonColor;
+  color: $buttonColor;
+}
+
+.founding-tab-active,
+.founding-tab-active:hover {
+  background-color: $buttonColor;
+  border-color: $buttonColor;
+  color: $lightBackground3;
+}
+
+.dark-mode .founding-tab {
+  background-color: $darkBackground;
+  border-color: $darkBoxShadow;
+  color: $darkBoxShadow;
+}
+
+.dark-mode .founding-tab-active,
+.dark-mode .founding-tab-active:hover {
+  background-color: $buttonColor;
+  border-color: $buttonColor;
+  color: $lightBackground3;
+}
+
+.founding-panel {
+  max-width: 860px;
+  margin: 0 auto;
+  background-color: $lightBackground2;
+  border: 1px solid $lightBorder1;
+  border-radius: 12px;
+  padding: 1.75rem 2rem;
+  box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
+  color: $textColor;
+}
+
+.dark-mode .founding-panel {
+  background-color: $darkBackground;
+  border-color: $darkBoxShadow;
+  color: $textColorDark;
+  box-shadow: 0px 10px 30px -15px $darkBoxShadow;
+}
+
+.founding-fade-in {
+  animation: founding-fade-in 0.35s ease;
+}
+
+@keyframes founding-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.founding-lead {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.founding-closing {
+  font-style: italic;
+  color: $cardSubtitle;
+  margin-top: 0.75rem;
+}
+
+.dark-mode .founding-closing {
+  color: $darkBoxShadow;
+}
+
+.founding-subhead {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: $buttonColor;
+  margin: 1.5rem 0 0.5rem 0;
+}
+
+.founding-panel p {
+  line-height: 1.55rem;
+  color: $textColor;
+  margin: 0 0 0.5rem 0;
+}
+
+.dark-mode .founding-panel p {
+  color: $darkBoxShadow2;
+}
+
+.founding-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  line-height: 1.6rem;
+}
+
+.founding-thesis-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.founding-thesis-card {
+  border: 1px solid $lightBorder1;
+  border-radius: 10px;
+  padding: 1rem;
+  position: relative;
+}
+
+.dark-mode .founding-thesis-card {
+  border-color: $darkBoxShadow;
+}
+
+.founding-thesis-card h6 {
+  margin: 0.5rem 0 0.35rem 0;
+  font-weight: 700;
+}
+
+.founding-thesis-card p {
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+.founding-product-pill,
+.founding-status-badge {
+  display: inline-block;
+  background-color: $buttonColor;
+  color: $lightBackground3;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+}
+
+.founding-status-row {
+  margin-bottom: 0.5rem;
+}
+
+.founding-functions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: 0.75rem;
+}
+
+.founding-function-card {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  border: 1px solid $lightBorder1;
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+}
+
+.dark-mode .founding-function-card {
+  border-color: $darkBoxShadow;
+}
+
+.founding-function-index {
+  flex: 0 0 auto;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: $buttonColor;
+  color: $lightBackground3;
+  font-weight: 700;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.founding-function-card h6 {
+  margin: 0 0 0.25rem 0;
+  font-weight: 700;
+}
+
+.founding-function-card p {
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+.founding-table-wrap {
+  overflow-x: auto;
+  margin-top: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid $lightBorder1;
+}
+
+.dark-mode .founding-table-wrap {
+  border-color: $darkBoxShadow;
+}
+
+.founding-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.founding-table th {
+  text-align: left;
+  background-color: $lightBackground3;
+  color: $titleColor;
+  padding: 0.6rem 0.85rem;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.dark-mode .founding-table th {
+  background-color: #20263a;
+  color: $textColorDark;
+}
+
+.founding-table td {
+  padding: 0.65rem 0.85rem;
+  border-top: 1px solid $lightBorder1;
+  vertical-align: top;
+}
+
+.dark-mode .founding-table td {
+  border-top: 1px solid $darkBoxShadow;
+  color: $darkBoxShadow2;
+}
+
+@media (max-width: 768px) {
+  .founding-thesis-grid {
+    grid-template-columns: 1fr;
+  }
+  .founding-panel {
+    padding: 1.25rem 1.25rem;
+  }
+  .founding-tab {
+    font-size: 0.78rem;
+    padding: 0.45rem 0.85rem;
+  }
+}

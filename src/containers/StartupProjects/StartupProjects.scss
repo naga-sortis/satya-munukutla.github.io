@@ -24,7 +24,9 @@
   padding: 1.5rem;
   border-radius: 10px;
   border: 1px solid $lightBorder1;
-  justify-content: center;
+  justify-content: flex-start;
+  text-align: left;
+  height: 100%;
 }
 .project-card-light {
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
@@ -86,5 +88,200 @@
   .project-subtitle {
     font-size: 16px;
     text-align: center;
+  }
+}
+
+// Interactive project carousel
+
+.project-carousel {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  gap: 0.5rem;
+  outline: none;
+}
+
+.carousel-viewport {
+  overflow: hidden;
+  flex: 1;
+  border-radius: 10px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.45s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0 0.25rem;
+}
+
+.carousel-arrow {
+  flex: 0 0 auto;
+  align-self: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid $lightBorder1;
+  background-color: $lightBackground2;
+  color: $buttonColor;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: $lightBoxShadow 0px 5px 15px -5px;
+  transition: 0.2s ease-in;
+  z-index: 2;
+}
+
+.carousel-arrow:hover {
+  background-color: $buttonColor;
+  color: $lightBackground3;
+}
+
+.dark-mode.project-carousel .carousel-arrow {
+  background-color: $darkBackground;
+  border-color: $darkBoxShadow;
+  color: $darkBoxShadow2;
+}
+
+.dark-mode.project-carousel .carousel-arrow:hover {
+  background-color: $buttonColor;
+  color: $lightBackground3;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  background-color: $lightBorder1;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+
+.carousel-dot-active {
+  background-color: $buttonColor;
+  width: 26px;
+  border-radius: 6px;
+}
+
+.project-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.card-tagline {
+  color: $cardSubtitle;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin: 2px 0 0 0;
+}
+
+.project-status-badge {
+  flex: 0 0 auto;
+  background-color: $buttonColor;
+  color: $lightBackground3;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.project-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.project-detail-block {
+  margin-top: 0.75rem;
+}
+
+.project-detail-block h6 {
+  color: $titleColor;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0 0.35rem 0;
+}
+
+.dark-mode .project-detail-block h6 {
+  color: $textColorDark;
+}
+
+.project-detail-block p {
+  color: $cardSubtitle;
+  font-size: 0.95rem;
+  line-height: 1.45rem;
+  margin: 0;
+}
+
+.dark-mode .project-detail-block p {
+  color: $darkBoxShadow;
+}
+
+.project-feature-list {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: $cardSubtitle;
+  font-size: 0.92rem;
+  line-height: 1.5rem;
+}
+
+.dark-mode .project-feature-list {
+  color: $darkBoxShadow;
+}
+
+.project-tech-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 1rem;
+}
+
+.project-tech-chip {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid $lightBorder1;
+  color: $cardSubtitle;
+  white-space: nowrap;
+}
+
+.dark-mode .project-tech-chip {
+  color: $darkBoxShadow;
+  border-color: $darkBoxShadow;
+}
+
+@media (max-width: 768px) {
+  .project-detail-grid {
+    grid-template-columns: 1fr;
+  }
+  .carousel-arrow {
+    width: 36px;
+    height: 36px;
   }
 }
