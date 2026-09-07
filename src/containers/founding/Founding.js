@@ -4,7 +4,7 @@ import "./Founding.scss";
 import {foundingSection} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 
-const TABS = ["Thesis", "NestGo", "Radius", "Decisions", "Naming", "Founder Note"];
+const TABS = ["Thesis", "NestGo", "Radius", "Founder Note"];
 
 export default function Founding() {
   const {isDark} = useContext(StyleContext);
@@ -25,10 +25,6 @@ export default function Founding() {
         <div className="founding-header">
           <h1 className="skills-heading">{f.title}</h1>
           <p className={isDark ? "dark-mode subTitle" : "subTitle"}>{f.subtitle}</p>
-          <div className="founding-disclaimer">
-            <i className="fas fa-exclamation-triangle"></i>
-            {f.workingNameNote}
-          </div>
         </div>
 
         <div className="founding-tabs" role="tablist" aria-label="Praxa company brief">
@@ -152,73 +148,6 @@ export default function Founding() {
                   <li key={i}>{r}</li>
                 ))}
               </ul>
-            </div>
-          )}
-
-          {activeTab === "Decisions" && (
-            <div className="founding-fade-in">
-              <div className="founding-table-wrap">
-                <table className="founding-table">
-                  <thead>
-                    <tr>
-                      <th>Question</th>
-                      <th>Decision</th>
-                      <th>Consequence</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {f.decisions.map(row => (
-                      <tr key={row.question}>
-                        <td>{row.question}</td>
-                        <td>{row.decision}</td>
-                        <td>{row.consequence}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-              <h6 className="founding-subhead">Sequencing (Revised)</h6>
-              <p>{f.sequencing}</p>
-              <h6 className="founding-subhead">Data Collection Rationale</h6>
-              <p>{f.dataRationale}</p>
-            </div>
-          )}
-
-          {activeTab === "Naming" && (
-            <div className="founding-fade-in">
-              <h6 className="founding-subhead">Chosen</h6>
-              <p>
-                <strong>{f.naming.chosen}</strong> — {f.naming.meaning}
-              </p>
-
-              <h6 className="founding-subhead">Known Conflicts</h6>
-              <div className="founding-table-wrap">
-                <table className="founding-table">
-                  <thead>
-                    <tr>
-                      <th>Entity</th>
-                      <th>Why it matters</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {f.naming.conflicts.map(row => (
-                      <tr key={row.entity}>
-                        <td>{row.entity}</td>
-                        <td>{row.note}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-
-              <h6 className="founding-subhead">Assessment</h6>
-              <p>{f.naming.assessment}</p>
-              <h6 className="founding-subhead">Recommended Alternative</h6>
-              <p>{f.naming.recommended}</p>
-              <h6 className="founding-subhead">Rejected</h6>
-              <p>{f.naming.rejected}</p>
-              <h6 className="founding-subhead">Lesson</h6>
-              <p>{f.naming.lesson}</p>
             </div>
           )}
 

@@ -133,7 +133,7 @@ const workExperiences = {
     {
       role: "AI Product Lead",
       company: "Sortis · Zadara Cloud Solutions",
-      companylogo: require("./assets/images/sortis-logo.svg"),
+      companylogo: require("./assets/images/sortis-logo.svg").default,
       date: "2024 – Present",
       desc: "Responsible for the AI vertical roadmap — both short-term deliverables and longer-term direction — building internal and external AI products in partnership with Zadara.",
       descBullets: [
@@ -148,7 +148,7 @@ const workExperiences = {
     {
       role: "Senior Cloud & AI Engineer",
       company: "Sortis Telecommunications · ST Engineering iDirect",
-      companylogo: require("./assets/images/sortis-logo.svg"),
+      companylogo: require("./assets/images/sortis-logo.svg").default,
       date: "Jun 2021 – 2024",
       desc: "Customer-facing cloud engineering for satellite network clients — a mix of infrastructure design, Python automation, and direct client engagement across Europe, the US, and India.",
       descBullets: [
@@ -163,7 +163,6 @@ const workExperiences = {
     {
       role: "Data Engineer Intern",
       company: "ADEX Corporation",
-      companylogo: require("./assets/images/sortis-logo.svg"),
       date: "Nov 2020 – Jun 2021",
       desc: "Built data pipelines and dashboards for industrial sensor monitoring and power plant performance.",
       descBullets: [
@@ -174,7 +173,6 @@ const workExperiences = {
     {
       role: "Hardware & Embedded Engineer",
       company: "MSR Technologies, India",
-      companylogo: require("./assets/images/sortis-logo.svg"),
       date: "2016 – 2017",
       desc: "Designed sensor-fusion systems on Arduino and Raspberry Pi for home automation and smart parking. Wrote control algorithms in Python and C.",
       descBullets: []
@@ -246,12 +244,7 @@ const bigProjects = {
         "Private vLLM (Qwen-compatible)",
         "On-premise Ubuntu deployment"
       ],
-      footerLink: [
-        {
-          name: "GitHub",
-          url: "https://github.com/naga-sortis/Veltrix_beacon_sage"
-        }
-      ]
+      footerLink: []
     },
     {
       projectName: "Veltrix Beacon",
@@ -275,12 +268,7 @@ const bigProjects = {
         "FastAPI + Streamlit",
         "Private vLLM inference"
       ],
-      footerLink: [
-        {
-          name: "GitHub",
-          url: "https://github.com/naga-sortis/Veltrix_beacon_sage"
-        }
-      ]
+      footerLink: []
     },
     {
       projectName: "NexSignal",
@@ -308,12 +296,7 @@ const bigProjects = {
         "Mapbox / OpenStreetMap",
         "Python (FastAPI) analytics backend"
       ],
-      footerLink: [
-        {
-          name: "GitHub",
-          url: "https://github.com/naga-sortis/signal_strength_app"
-        }
-      ]
+      footerLink: []
     },
     {
       projectName: "SLM — Server Lifecycle Manager",
@@ -340,28 +323,18 @@ const bigProjects = {
         "Celery + Redis",
         "Nginx"
       ],
-      footerLink: [
-        {
-          name: "Live site",
-          url: "https://slm.sortis.es"
-        }
-      ]
+      footerLink: []
     }
   ],
   display: true
 };
 
-// Founding — Praxa (working name: Praxis) company brief
-// A working, pre-clearance venture brief — kept honest and unpolished on purpose.
+// Founding — Praxa company brief
 
 const foundingSection = {
   title: "Founding Praxa",
-  subtitle: "A company brief in progress — working name, naming clearance not yet complete.",
+  subtitle: "An early-stage company brief, built in the open.",
   display: true,
-  workingName: "Praxis",
-  recommendedName: "Praxa",
-  workingNameNote:
-    "Working name in this brief: Praxis. Trademark clearance is not complete — see the Naming tab before treating this as final.",
   thesis: {
     statement:
       "People and organisations make enormous decisions about the distance between home and work, with almost no data about what that distance actually costs.",
@@ -381,36 +354,6 @@ const foundingSection = {
   },
   houseStyle:
     "Decision support that ends in a finished artifact, not an insight. NestGo does not stop at a cost-of-living comparison — it fills the visa forms. Radius must not stop at a dashboard — it generates the disclosure, the policy draft, the municipal submission. Rule of thumb: if the user still has to do the tedious part afterwards, the product isn't finished.",
-  naming: {
-    chosen: "Praxis",
-    meaning: "Turning theory into practice — names the company's house style.",
-    conflicts: [
-      {
-        entity: "Praxis Labs (US)",
-        note: "Enterprise workplace software; clients include eBay, Uber, Amazon, Etsy, ServiceNow, Target. Same buyer as Radius — highest-risk conflict."
-      },
-      {
-        entity: "Praxis (praxisnation.com)",
-        note: "\"Internet-native nation,\" plans a Mediterranean city. Adjacent to Radius's civic-infrastructure positioning."
-      },
-      {
-        entity: "Praxis / Altran Praxis (UK)",
-        note: "Safety-critical software house, later absorbed into Altran. Had a Bangalore office."
-      },
-      { entity: "Praxis Solutions", note: "Salesforce / Rootstock ERP consultancy." },
-      { entity: "praxis.co", note: "Faith-based venture-building ecosystem." },
-      { entity: "Praxis (Isaac Morehouse)", note: "US apprenticeship / career programme." },
-      { entity: "Praxis.tech", note: "Generative-AI software company." }
-    ],
-    assessment:
-      "The risk is not litigation, it is unownability — crowded search results, unavailable premium domains, and probable blocks in Nice classes 9 and 42. Proceeding is a legitimate choice, but it should be a knowing one.",
-    recommended:
-      "Praxa — same meaning, coined rather than dictionary, therefore clearable and ownable. Secondary options: Poros (Greek: passage / resourcefulness), Ergon (Greek: work).",
-    rejected:
-      "Odos — collides with a funded Spanish/Irish agri-food climate-tech startup: same country, same buyer type, same regulatory framework as the Radius EU wedge.",
-    lesson:
-      "Dictionary words — especially Greek ones — are taken. Coined names clear trademarks. Run EUIPO + Spanish + Indian registry searches, classes 9 and 42, plus domain and LinkedIn, before committing."
-  },
   nestgo: {
     status: "Existing product concept",
     forWhom: "Expats, students, tourists, and employees in relocation programmes.",
@@ -469,32 +412,6 @@ const foundingSection = {
       "Density requirement — infrastructure evidence is worthless below critical mass. First market must be one dense corridor, not a broad rollout."
     ]
   },
-  decisions: [
-    {
-      question: "First Radius corridor",
-      decision: "Bengaluru first, EU pilot second",
-      consequence: "Reverses the original funding sequencing — see Sequencing below"
-    },
-    {
-      question: "Data collection",
-      decision: "Opt-in app; coarse geohash for home location; no raw GPS trails; aggregation floor on all reporting",
-      consequence: "Slower adoption, far lower legal and reputational risk"
-    },
-    {
-      question: "NestGo ↔ Radius data",
-      decision: "Stay separate",
-      consequence: "Shared identity/billing infra is fine; datasets do not mix, keeping NestGo out of Radius's privacy regime"
-    },
-    {
-      question: "Legal entity",
-      decision: "Both Spain and India",
-      consequence: "Two filing sets, transfer pricing, and an EU → India transfer requiring SCCs. Structure — parent vs. subsidiary — still to be advised by counsel"
-    }
-  ],
-  sequencing:
-    "Build where the pain is loudest. Bengaluru validates whether the Commute Drag Index measures anything real — EU sustainability leads cannot tell you that, Whitefield commuters can in week one. Cost of this choice: smaller deal sizes, discretionary rather than deadline-driven buying, no regulatory forcing function. Binding constraint: the EU disclosure path must still be designed into the data model from day one, even while selling only in India — not as a shipped feature, but the schema must be able to produce a compliance-grade Scope 3 Category 7 figure without a rewrite. Retrofitting provenance onto an operational dashboard is a rebuild, not a feature.",
-  dataRationale:
-    "Opt-in app was chosen over calendar/badge inference deliberately. Inference appears less invasive because it avoids GPS, but it operates without active employee consent and yields attendance data — precisely what makes employees read the product as surveillance. Opt-in is harder to adopt and much harder to be sued over. Both India's DPDP Act and GDPR apply.",
   founderNote: {
     constraint: "Solo founder, no external funding. This is the binding constraint and it reorders the roadmap.",
     reasoning:
@@ -515,21 +432,21 @@ const achievementSection = {
     {
       title: "AWS Cloud Practitioner",
       subtitle: "Amazon Web Services",
-      image: require("./assets/images/aws-badge.svg"),
+      image: require("./assets/images/aws-badge.svg").default,
       imageAlt: "AWS Cloud Practitioner",
       footerLink: []
     },
     {
       title: "Azure Cloud Concepts",
       subtitle: "Microsoft",
-      image: require("./assets/images/azure-badge.svg"),
+      image: require("./assets/images/azure-badge.svg").default,
       imageAlt: "Azure Cloud Concepts",
       footerLink: []
     },
     {
       title: "Cybersecurity Essentials",
       subtitle: "Cisco",
-      image: require("./assets/images/cisco-badge.svg"),
+      image: require("./assets/images/cisco-badge.svg").default,
       imageAlt: "Cisco Cybersecurity Essentials",
       footerLink: []
     }
