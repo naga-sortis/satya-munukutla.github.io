@@ -20,374 +20,268 @@ const illustration = {
 };
 
 const greeting = {
-  username: "Miguel",
-  title: "Hi all, I'm Miguel",
+  username: "Naga",
+  title: "Hi, I'm Naga Munukutla",
   subTitle: emoji(
-    "Generative AI Expert at Accenture, building end-to-end AI solutions from data cleaning and model training to deployment with CI/CD pipelines using Azure services and advanced data science."
+    "AI Product Lead building sovereign AI infrastructure — private LLM systems, document intelligence, and RAG platforms that run entirely on infrastructure I control. No commercial LLM APIs, no data leaving the network."
   ),
-  resumeLink:
-    "/resume.pdf", // Asegúrate de que el enlace apunte a tu CV correcto
-  displayGreeting: true // Mantenlo en true para mostrar esta sección
+  resumeLink: "/resume.pdf",
+  displayGreeting: true
 };
-
-
 
 // Social Media Links
 
 const socialMediaLinks = {
-  github: "https://github.com/miguelgh65",
-  linkedin: "https://www.linkedin.com/in/mgonzalezhndz/",
-  gmail: "miguelgh65@gmail.com",
-  // El resto de los enlaces están vacíos ya que no los tienes
+  github: "https://github.com/naga-sortis",
+  linkedin: "https://linkedin.com/in/satya-munukutla",
+  gmail: "naga.munukutla@gmail.com",
   gitlab: "",
   facebook: "",
   medium: "",
   stackoverflow: "",
-  display: true // Mantenlo en true para mostrar esta sección
+  display: true
 };
 
 // Skills Section
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "EXPERT IN GENERATIVE AI, DATA SCIENCE, AND CLOUD SOLUTIONS",
+  subTitle: "SOVEREIGN AI INFRASTRUCTURE · DOCUMENT INTELLIGENCE · FULL-STACK PLATFORMS",
   skills: [
     emoji(
-      "⚡ Build and deploy AI-driven solutions using CI/CD pipelines and Azure Functions"
+      "⚡ Design and ship sovereign AI products — private LLM inference, no commercial API calls, no data leaving the network"
     ),
     emoji(
-      "⚡ Develop machine learning models, including diffusion models for Text-to-Speech (TTS) systems"
+      "⚡ Build RAG and document-intelligence pipelines with LangChain, ChromaDB, and self-hosted vLLM"
     ),
     emoji(
-      "⚡ Data analysis and model training using Python, PyTorch, and advanced data science techniques"
+      "⚡ Develop full-stack internal platforms — Vue 3 / Django REST Framework / PostgreSQL"
     ),
     emoji(
-      "⚡ Work with Transformers for Natural Language Processing (NLP) and large-scale language models"
+      "⚡ Ship native Android applications with real-time sensor and signal data pipelines"
     ),
     emoji(
-      "⚡ Cloud-based solution integration with RESTful APIs and large-scale databases"
+      "⚡ Own AI product roadmaps end-to-end — architecture, GDPR/NIS2 compliance mapping, and production delivery"
     )
   ],
   softwareSkills: [
-    {
-      skillName: "python",
-      fontAwesomeClassname: "fab fa-python"
-    },
-    {
-      skillName: "pytorch",
-      fontAwesomeClassname: "fas fa-brain" // Cambia esto si tienes un ícono mejor
-    },
-    {
-      skillName: "transformers",
-      fontAwesomeClassname: "fas fa-robot" // Placeholder para Transformers
-    },
-    {
-      skillName: "azure",
-      fontAwesomeClassname: "fab fa-microsoft"
-    },
-    {
-      skillName: "sql-database",
-      fontAwesomeClassname: "fas fa-database"
-    },
-    {
-      skillName: "docker",
-      fontAwesomeClassname: "fab fa-docker"
-    },
-    {
-      skillName: "ci-cd",
-      fontAwesomeClassname: "fas fa-tools"
-    }
+    { skillName: "python", fontAwesomeClassname: "fab fa-python" },
+    { skillName: "fastapi", fontAwesomeClassname: "fas fa-bolt" },
+    { skillName: "docker", fontAwesomeClassname: "fab fa-docker" },
+    { skillName: "aws", fontAwesomeClassname: "fab fa-aws" },
+    { skillName: "vuejs", fontAwesomeClassname: "fab fa-vuejs" },
+    { skillName: "android", fontAwesomeClassname: "fab fa-android" },
+    { skillName: "sql-database", fontAwesomeClassname: "fas fa-database" },
+    { skillName: "terraform", fontAwesomeClassname: "fas fa-cubes" },
+    { skillName: "git", fontAwesomeClassname: "fab fa-git-alt" }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: true
 };
-
 
 // Education Section
 
 const educationInfo = {
-  display: true, // Set false to hide this section, defaults to true
+  display: true,
   schools: [
     {
-      schoolName: "Universidad Politécnica de Madrid (UPM)",
-      logo: require("./assets/images/upm.png"), // Logo de UPM
-      subHeader: "Master's Degree in Telecommunications Engineering",
-      duration: "2022",
-      desc: "Specialization in Artificial Intelligence and Telecommunications.",
-      descBullets: [
-        "Development of AI solutions applied to telecommunications",
-        "Advanced courses in artificial intelligence and networks",
-        "Distinction in final thesis: Creation of a program to clone and blend voices from fictional characters with a smart conversational assistant for Alexa"
-      ]
+      schoolName: "Universidad de Jaén, Spain",
+      subHeader: "MSc Telecommunication Engineering",
+      duration: "2018 – 2021",
+      desc: "Thesis: Arduino-based photovoltaic energy harvesting with MPPT control (500+ hours, MATLAB/Simulink validation).",
+      descBullets: []
     },
     {
-      schoolName: "Politecnico di Milano (Polimi)",
-      logo: require("./assets/images/polimi.png"), // Logo de Polimi
-      subHeader: "Master's in Computer Science and Artificial Intelligence",
-      duration: "2022",
-      desc: "Participation in the Erasmus+ program focused on AI and data science.",
-      descBullets: [
-        "Work on AI and machine learning projects",
-        "Publication of studies on natural language processing"
-      ]
-    },
-    {
-      schoolName: "Universidad Politécnica de Madrid (UPM)",
-      logo: require("./assets/images/upm.png"), // Logo de UPM
-      subHeader: "Bachelor's Degree in Telecommunications Technology and Services Engineering",
-      duration: "2020",
-      desc: "Specialization in telecommunications systems and networks.",
-      descBullets: [
-        "Study of networks, systems, and data processing",
-        "Development of telecommunications-related projects",
-        "Outstanding grade in final thesis: Creation of a program to detect febrile states using AI"
-      ]
-    },
-    {
-      schoolName: "Asociación Española de Programadores Informáticos (AEPI)",
-      logo: require("./assets/images/aepi.jpg"), // Logo de AEPI
-      subHeader: "Professional Python Course",
-      duration: "2020",
-      desc: "Specialized course in Python for software development and data analysis.",
-      descBullets: [
-        "Development of advanced Python scripts",
-        "Applications of Python in data science and automation",
-        "Final project: Creation of a car workshop sales management system using Python and SQL"
-      ]
+      schoolName: "Andhra University, India",
+      subHeader: "BTech Electronics & Communications Engineering",
+      duration: "2014 – 2018",
+      desc: "Hackathons with Cisco and Smart India Hackathon; presented startup ideas at APXLR8 accelerator.",
+      descBullets: []
     }
   ]
 };
 
-
-
-// Your top 3 proficient stacks/tech experience
+// Your top proficient stacks/tech experience
 
 const techStack = {
-  viewSkillBars: true, // Set it to true to show Proficiency Section
+  viewSkillBars: true,
   experience: [
     {
-      Stack: "Artificial Intelligence & Machine Learning", // Especialización en IA
-      progressPercentage: "95%" // Proficiencia en IA
+      Stack: "Sovereign AI Infrastructure (private vLLM, RAG, ChromaDB, LangChain)",
+      progressPercentage: "90%"
     },
     {
-      Stack: "Azure Cloud & DevOps", // Experiencia en Azure y CI/CD
-      progressPercentage: "85%" // Proficiencia en Azure y servicios en la nube
+      Stack: "Cloud & DevOps (AWS, Terraform, Docker, CI/CD)",
+      progressPercentage: "85%"
     },
     {
-      Stack: "Diffusion Models & Transformers", // Modelos de Difusión y Transformers
-      progressPercentage: "80%" // Proficiencia en Modelos de Difusión y Transformers
+      Stack: "Full-Stack Development (Vue 3 / Django / FastAPI)",
+      progressPercentage: "80%"
     },
     {
-      Stack: "PyTorch & Python Programming", // Uso de PyTorch y Python
-      progressPercentage: "90%" // Proficiencia en PyTorch y Python
+      Stack: "Python & SQL (Advanced)",
+      progressPercentage: "90%"
     }
   ],
-  displayCodersrank: false // Mantenlo en false si no deseas mostrar las insignias de Codersrank
+  displayCodersrank: false
 };
-
 
 // Work experience section
 
 const workExperiences = {
-  display: true, // Set it to true to show workExperiences Section
+  display: true,
   experience: [
     {
-      role: "AI Developer (Alexa Prize)",
-      company: "Amazon via UPM",
-      companylogo: require("./assets/images/amazonupm.png"), // Combined logo for Amazon and UPM
-      date: "2021-2023",
-      desc: "Participated in the Alexa Prize competition as part of a UPM team, developing AI solutions for conversational interaction.",
-      descBullets: [
-        "Developed AI models for conversational interaction",
-        "Collaborated with Amazon to enhance Alexa-based solutions"
-      ]
-    },
-    {
-      role: "Consultant",
-      company: "Sortis & ST Engineering",
-      companylogo: require("./assets/images/sortisst.png"), // Combined logo for Sortis and ST Engineering
-      date: "2022 – 2023",
-      desc: "Consultant specializing in satellite network operations and data analysis, working for ST Engineering through Sortis.",
-      descBullets: [
-        "Optimized global satellite network operations",
-        "Performed data analysis and developed automated solutions"
-      ]
-    },
-    {
-      role: "AI Engineer",
-      company: "Dubme",
-      companylogo: require("./assets/images/dubme.jpeg"), // Dubme logo
-      date: "2023 – 2024",
-      desc: "Developed AI models for automated audio and video generation on multimedia platforms.",
-      descBullets: [
-        "Implemented diffusion models for voice generation",
-        "Automated multimedia workflow processes"
-      ]
-    },
-    {
-      role: "Generative AI Expert",
-      company: "Accenture",
-      companylogo: require("./assets/images/accenture.jpg"), // Accenture logo
+      role: "AI Product Lead",
+      company: "Sortis · Zadara Cloud Solutions",
+      companylogo: require("./assets/images/sortis-logo.svg"),
       date: "2024 – Present",
-      desc: "Generative AI specialist, building end-to-end solutions using Azure, PyTorch, and advanced ML models.",
+      desc: "Responsible for the AI vertical roadmap — both short-term deliverables and longer-term direction — building internal and external AI products in partnership with Zadara.",
       descBullets: [
-        "Developed generative AI solutions with Azure",
-        "Implemented CI/CD pipelines for ML models "
-        
-
+        "Veltrix Veritas v2.0 — a Document Intelligence Platform that takes a single technical document and produces a complete sales intelligence package: competitive analysis via self-hosted SearXNG, winning arguments with evidence citations, audience profiles across 16 industry verticals, and multi-channel campaign plans. Runs on private vLLM (Qwen/Qwen2.5-VL-7B-Instruct-AWQ), ChromaDB, and LangChain — zero data leaves the network",
+        "Veltrix Sage — organisational knowledge query engine. FastAPI backend, Streamlit UI, ChromaDB vector store, GDPR-compliant, bilingual ES/EN. Production v1.0 deployed on-premise",
+        "Veltrix Beacon — Microsoft 365 knowledge discovery with cross-platform PC agents. Same private-infrastructure principle; full production deployment",
+        "NEXUS — end-to-end sovereign AI service pack for enterprise clients, including the FORGE embedded AI team-as-a-service offering",
+        "Co-authored a technical article on sovereign AI architecture with Zadara's engineering team, published on the Zadara blog",
+        "Led architecture and pricing for a €259K public procurement bid (SUMA Gestión Tributaria — generative AI virtual assistant), including compliance mapping across contract documents"
       ]
+    },
+    {
+      role: "Senior Cloud & AI Engineer",
+      company: "Sortis Telecommunications · ST Engineering iDirect",
+      companylogo: require("./assets/images/sortis-logo.svg"),
+      date: "Jun 2021 – 2024",
+      desc: "Customer-facing cloud engineering for satellite network clients — a mix of infrastructure design, Python automation, and direct client engagement across Europe, the US, and India.",
+      descBullets: [
+        "Led an AI digitalization initiative — built pipelines on AWS to replace manual satellite support workflows with predictive monitoring and automated triage",
+        "Designed serverless and containerised infrastructure (Lambda, ECS/Fargate, S3, RDS, CloudWatch) for real-time network diagnostics across client deployments",
+        "Built time-series forecasting and anomaly detection on satellite telemetry data; reduced reactive incidents by catching signal degradation before it reached customers",
+        "Wrote secure REST APIs connecting customer systems to internal support tooling; handled field training for international client teams",
+        "SLM (Server Lifecycle Manager) — built an internal full-stack IT platform on Vue 3, Django 5, PostgreSQL, Redis/Celery, and Nginx; in production at slm.sortis.es",
+        "NexSignal — developed an Android app for cellular signal intelligence and dual-SIM carrier switching targeting Orange Spain; produced the full pitch deck and technical alignment documentation"
+      ]
+    },
+    {
+      role: "Data Engineer Intern",
+      company: "ADEX Corporation",
+      companylogo: require("./assets/images/sortis-logo.svg"),
+      date: "Nov 2020 – Jun 2021",
+      desc: "Built data pipelines and dashboards for industrial sensor monitoring and power plant performance.",
+      descBullets: [
+        "Built Python data pipelines for real-time industrial sensor data with automated alarm generation, integrated into a proprietary control optimisation platform",
+        "Developed SQL-backed dashboards for power plant performance monitoring and predictive maintenance"
+      ]
+    },
+    {
+      role: "Hardware & Embedded Engineer",
+      company: "MSR Technologies, India",
+      companylogo: require("./assets/images/sortis-logo.svg"),
+      date: "2016 – 2017",
+      desc: "Designed sensor-fusion systems on Arduino and Raspberry Pi for home automation and smart parking. Wrote control algorithms in Python and C.",
+      descBullets: []
     }
   ]
 };
-
-
 
 /* Your Open Source Section to View Your Github Pinned Projects
 To know how to get github key look at readme.md */
 
 const openSource = {
-  showGithubProfile: "true", // Set true or false to show Contact profile using Github, defaults to true
-  display: true // Set false to hide this section, defaults to true
+  showGithubProfile: "true",
+  display: true
 };
 
 // Some big projects you have worked on
 
 const bigProjects = {
   title: "Big Projects",
-  subtitle: "PROJECTS I AM CURRENTLY WORKING ON",
+  subtitle: "SOVEREIGN AI PRODUCTS & PLATFORMS I'VE BUILT",
   projects: [
     {
-      image: require("./assets/images/nmpfit.png"), // Asegúrate de tener el logo de NMPfit
-      projectName: "NMPfit",
-      projectDesc: "An AI-powered (AI embedding database and Langchain) conversational assistant for health, specializing in diet planning, gym routines, and overall wellness management.",
+      projectName: "Veltrix Sage & Beacon",
+      projectDesc:
+        "Two sovereign AI products on the same private stack — Sage lets teams query organisational knowledge, Beacon surfaces that knowledge from Microsoft 365 (SharePoint, Teams, OneDrive). Private vLLM inference, ChromaDB vector store, zero data exfiltration.",
       footerLink: [
         {
-          name: "Not website yet",
-          url: "wwww.google.com" // Cambia esta URL si tienes el enlace correcto
+          name: "GitHub",
+          url: "https://github.com/naga-sortis/Veltrix_beacon_sage"
         }
-        // Puedes agregar más botones si es necesario
+      ]
+    },
+    {
+      projectName: "NexSignal",
+      projectDesc:
+        "Android app that gives real cellular signal intelligence and automatically switches between SIM cards on dual-SIM devices to maintain the best available connection — built for the Orange Spain market.",
+      footerLink: [
+        {
+          name: "GitHub",
+          url: "https://github.com/naga-sortis/signal_strength_app"
+        }
+      ]
+    },
+    {
+      projectName: "SLM — Server Lifecycle Manager",
+      projectDesc:
+        "Internal IT operations platform managing server lifecycle, credentials, and VPN access across the organisation — Vue 3 / Django REST Framework / PostgreSQL / Celery. In production at slm.sortis.es.",
+      footerLink: [
+        {
+          name: "Live site",
+          url: "https://slm.sortis.es"
+        }
       ]
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: true
 };
-
 
 // Achievement Section
 // Include certificates, talks etc
 
 const achievementSection = {
   title: emoji("Achievements And Certifications 🏆 "),
-  subtitle:
-    "Honors, Certifications, and Significant Projects",
-
+  subtitle: "Certifications and significant work",
   achievementsCards: [
     {
-      title: "Honors in Master's Thesis",
-      subtitle:
-        "Created a program to clone and blend voices from fictional characters with a smart conversational assistant's voice. Graduated with distinction.",
-      image: require("./assets/images/matricula.jpg"), // Logo for distinction
-      imageAlt: "Master's Thesis Honors",
-      footerLink: [
-        {
-          name: "View Master's Thesis",
-          url: "#" // Add link if available
-        }
-      ]
+      title: "AWS Cloud Practitioner",
+      subtitle: "Amazon Web Services",
+      image: require("./assets/images/aws-badge.svg"),
+      imageAlt: "AWS Cloud Practitioner",
+      footerLink: []
     },
     {
-      title: "Outstanding in Bachelor's Thesis",
-      subtitle:
-        "Developed a program to detect febrile states using AI. Graduated with outstanding grades.",
-      image: require("./assets/images/sobresaliente.png"), // Logo for outstanding
-      imageAlt: "Bachelor's Thesis Outstanding",
-      footerLink: [
-        {
-          name: "View Bachelor's Thesis",
-          url: "#" // Add link if available
-        }
-      ]
+      title: "Azure Cloud Concepts",
+      subtitle: "Microsoft",
+      image: require("./assets/images/azure-badge.svg"),
+      imageAlt: "Azure Cloud Concepts",
+      footerLink: []
     },
     {
-      title: "Dialogflow Certifications",
-      subtitle: "Certified in Dialogflow NCOP and NCPA",
-      image: require("./assets/images/st.jpg"), // Logo for Dialogflow
-      imageAlt: "Dialogflow Certification",
-      footerLink: [
-        {
-          name: "Certification Details",
-          url: "#" // Add link if available
-        }
-      ]
-    },
-    {
-      title: "Nvidia Deep Learning Fundamentals",
-      subtitle: "Certified in Nvidia Deep Learning Fundamentals",
-      image: require("./assets/images/nvidia.png"), // Logo for Nvidia
-      imageAlt: "Nvidia Deep Learning Certification",
-      footerLink: [
-        {
-          name: "Certification Details",
-          url: "#" // Add link if available
-        }
-      ]
-    },
-    {
-      title: "Azure Certifications (In Progress)",
-      subtitle: "Currently pursuing Azure Fundamentals & Azure AI Fundamentals certifications.",
-      image: require("./assets/images/azure.png"), // Logo for Azure
-      imageAlt: "Azure Certification",
-      footerLink: [
-        {
-          name: "Certification Details",
-          url: "#" // Add link if available
-        }
-      ]
+      title: "Cybersecurity Essentials",
+      subtitle: "Cisco",
+      image: require("./assets/images/cisco-badge.svg"),
+      imageAlt: "Cisco Cybersecurity Essentials",
+      footerLink: []
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: true
 };
 
 // Blogs Section
 
 const blogSection = {
   title: "Blogs",
-  subtitle:
-    "With Love for Developing cool stuff, I love to write and teach others what I have learnt.",
-  displayMediumBlogs: "true", // Set true to display fetched medium blogs instead of hardcoded ones
-  blogs: [
-    {
-      url: "https://blog.usejournal.com/create-a-google-assistant-action-and-win-a-google-t-shirt-and-cloud-credits-4a8d86d76eae",
-      title: "Win a Google Assistant Tshirt and $200 in Google Cloud Credits",
-      description:
-        "Do you want to win $200 and Google Assistant Tshirt by creating a Google Assistant Action in less then 30 min?"
-    },
-    {
-      url: "https://medium.com/@saadpasta/why-react-is-the-best-5a97563f423e",
-      title: "Why REACT is The Best?",
-      description:
-        "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
-    }
-  ],
-  display: false // Set false to hide this section, defaults to true
+  subtitle: "Writing about sovereign AI infrastructure and the products I build.",
+  displayMediumBlogs: "false",
+  blogs: [],
+  display: false
 };
 
 // Talks Sections
 
 const talkSection = {
   title: "TALKS",
-  subtitle: emoji(
-    "I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅"
-  ),
-
-  talks: [
-    {
-      title: "Build Actions For Google Assistant",
-      subtitle: "Codelab at GDG DevFest Karachi 2019",
-      slides_url: "https://bit.ly/saadpasta-slides",
-      event_url: "https://www.facebook.com/events/2339906106275053/"
-    }
-  ],
-  display: false // Set false to hide this section, defaults to true
+  subtitle: emoji("I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅"),
+  talks: [],
+  display: false
 };
 
 // Podcast Section
@@ -395,41 +289,34 @@ const talkSection = {
 const podcastSection = {
   title: emoji("Podcast 🎙️"),
   subtitle: "I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY",
-
-  // Please Provide with Your Podcast embeded Link
-  podcast: [
-    "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
-  ],
-  display: false // Set false to hide this section, defaults to true
+  podcast: [],
+  display: false
 };
 
-// Resume Section
 // Resume Section
 const resumeSection = {
   title: "Resume",
   subtitle: "Feel free to download my resume",
-  display: true // Set false to hide this section, defaults to true
+  display: true
 };
 
 // Contact Information Section
 const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle:
-    "Currently busy and happy at Accenture, but feel free to reach out for projects or just to say hi. My inbox is always open!",
-  number: "+34 648607181", // Reemplaza con tu número si lo deseas
-  email_address: "miguelgh696@gmail.com" // Cambia por tu correo si es necesario
+    "Open to senior AI product, sovereign AI infrastructure, or platform engineering roles. My inbox is always open!",
+  number: "+34 662 486 772",
+  email_address: "naga.munukutla@gmail.com"
 };
-
-
 
 // Twitter Section
 
 const twitterDetails = {
-  userName: "twitter", //Replace "twitter" with your twitter username without @
-  display: false // Set true to display this section, defaults to false
+  userName: "twitter",
+  display: false
 };
 
-const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
+const isHireable = true; // Open to senior AI product / sovereign AI infrastructure / platform engineering roles
 
 export {
   illustration,
