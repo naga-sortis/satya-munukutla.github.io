@@ -1,14 +1,17 @@
 {
   "files": {
-    "main.css": "/satya-munukutla.github.io/static/css/main.5acb3128.css",
-    "main.js": "/satya-munukutla.github.io/static/js/main.59f0ddb5.js",
+    "main.css": "/satya-munukutla.github.io/static/css/main.1c46e510.css",
+    "main.js": "/satya-munukutla.github.io/static/js/main.27fcd9ad.js",
     "static/css/64.bba8fa55.chunk.css": "/satya-munukutla.github.io/static/css/64.bba8fa55.chunk.css",
     "static/js/64.56dc6704.chunk.js": "/satya-munukutla.github.io/static/js/64.56dc6704.chunk.js",
     "static/css/769.b3cbb36b.chunk.css": "/satya-munukutla.github.io/static/css/769.b3cbb36b.chunk.css",
     "static/js/769.47d64479.chunk.js": "/satya-munukutla.github.io/static/js/769.47d64479.chunk.js",
+    "static/media/nexsignal-coverage-map.webp": "/satya-munukutla.github.io/static/media/nexsignal-coverage-map.7c3444a726a9ac74749c.webp",
     "static/media/Montserrat-Regular.ttf": "/satya-munukutla.github.io/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
     "static/media/Agustina.woff": "/satya-munukutla.github.io/static/media/Agustina.eb0c59dda4cc308cba96.woff",
     "static/media/manOnTable.svg": "/satya-munukutla.github.io/static/media/manOnTable.8f117eb207e57ed8f89d67d595aceb45.svg",
+    "static/media/slm-vpn-otp.png": "/satya-munukutla.github.io/static/media/slm-vpn-otp.6bce6db45ca6cf16c39c.png",
+    "static/media/slm-vpn-credentials.png": "/satya-munukutla.github.io/static/media/slm-vpn-credentials.950709b61e3aae8a3a54.png",
     "static/media/contactMailDark.svg": "/satya-munukutla.github.io/static/media/contactMailDark.1db650d351729a0f17b4e3104e6a7b7a.svg",
     "static/media/developerActivity.svg": "/satya-munukutla.github.io/static/media/developerActivity.2c0445cae86f4243433a2f5a22b2c031.svg",
     "static/media/skill.svg": "/satya-munukutla.github.io/static/media/skill.35a147662ab0a1d15e579690446e0258.svg",
@@ -18,15 +21,15 @@
     "static/media/azure-badge.svg": "/satya-munukutla.github.io/static/media/azure-badge.4312815e4a1c22e4cb390ffe7917de7f.svg",
     "static/media/cisco-badge.svg": "/satya-munukutla.github.io/static/media/cisco-badge.80937d2c0f11b6b8ec05a56cee50424b.svg",
     "static/media/sortis-logo.svg": "/satya-munukutla.github.io/static/media/sortis-logo.a987673d78f78f297ad795458268ff68.svg",
-    "main.5acb3128.css.map": "/satya-munukutla.github.io/static/css/main.5acb3128.css.map",
-    "main.59f0ddb5.js.map": "/satya-munukutla.github.io/static/js/main.59f0ddb5.js.map",
+    "main.1c46e510.css.map": "/satya-munukutla.github.io/static/css/main.1c46e510.css.map",
+    "main.27fcd9ad.js.map": "/satya-munukutla.github.io/static/js/main.27fcd9ad.js.map",
     "64.bba8fa55.chunk.css.map": "/satya-munukutla.github.io/static/css/64.bba8fa55.chunk.css.map",
     "64.56dc6704.chunk.js.map": "/satya-munukutla.github.io/static/js/64.56dc6704.chunk.js.map",
     "769.b3cbb36b.chunk.css.map": "/satya-munukutla.github.io/static/css/769.b3cbb36b.chunk.css.map",
     "769.47d64479.chunk.js.map": "/satya-munukutla.github.io/static/js/769.47d64479.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5acb3128.css",
-    "static/js/main.59f0ddb5.js"
+    "static/css/main.1c46e510.css",
+    "static/js/main.27fcd9ad.js"
   ]
 }
