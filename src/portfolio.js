@@ -199,6 +199,23 @@ const bigProjects = {
       projectName: "Veltrix Veritas v2.0",
       tagline: "Document Intelligence Platform",
       status: "Production",
+      media: [
+        {
+          src: require("./assets/images/screenshots/veritas-upload-vertical.png"),
+          alt: "Veritas document upload screen with an industry vertical selector, currently set to Academic Research Edition",
+          caption: "Upload a document and pick an industry vertical to steer the analysis"
+        },
+        {
+          src: require("./assets/images/screenshots/veritas-processing.png"),
+          alt: "Veritas analyzing an uploaded document in real time, showing processing status",
+          caption: "Real-time processing — document ingestion and analysis in progress"
+        },
+        {
+          src: require("./assets/images/screenshots/veritas-results-navigation.png"),
+          alt: "Veritas results view showing AI-detected sectors and a navigation grid of 16 analysis modules including Arguments, Market, Campaigns, and Report",
+          caption: "AI-detected sectors plus the full analysis suite — arguments, market, campaigns, and more"
+        }
+      ],
       projectDesc:
         "Takes a single technical document and produces a complete sales intelligence package — competitive analysis, evidence-backed arguments, audience profiles, and campaign plans — without the document ever leaving the network.",
       problem:
